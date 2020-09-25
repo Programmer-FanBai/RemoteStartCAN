@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-wthings-gateway/logs/*
-wthings-gateway/config/connected_devices.json
-wthings-gateway/data/
 .idea/
+/.idea/
+/wthings_gateway/config/connected_devices.json
+/wthings_gateway/data/
+/wthings_gateway/logs/
