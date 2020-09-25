@@ -1,0 +1,171 @@
+2020-07-27 03:27:41 - INFO - 39288 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:27:41 - INFO - 39288 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:27:41 - INFO - 39288 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:27:41 - INFO - 39872 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:27:41 - INFO - 39872 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:27:41 - INFO - 38876 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:27:41 - INFO - 38876 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:27:41 - INFO - 38876 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:27:41 - INFO - 39832 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:27:41 - INFO - 39832 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:29:06 - INFO - 39744 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:29:06 - INFO - 39744 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:29:06 - INFO - 39744 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:29:06 - INFO - 29100 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:29:06 - INFO - 29100 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:29:07 - INFO - 20996 - [plc_connector.py] - plc_connector - 163 - Stopped plc-siemens connector
+2020-07-27 03:29:07 - INFO - 20996 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:29:07 - INFO - 20996 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:29:07 - INFO - 20996 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:29:07 - INFO - 36432 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:29:07 - INFO - 36432 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:30:28 - INFO - 31752 - [plc_connector.py] - plc_connector - 163 - Stopped plc-siemens connector
+2020-07-27 03:30:28 - INFO - 31752 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:30:28 - INFO - 31752 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:30:28 - INFO - 31752 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:30:28 - INFO - 14588 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:30:28 - INFO - 14588 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:30:29 - INFO - 31752 - [plc_connector.py] - plc_connector - 163 - Stopped plc-siemens connector
+2020-07-27 03:30:29 - INFO - 31752 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:30:29 - INFO - 31752 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:30:29 - INFO - 31752 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:30:29 - INFO - 40736 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:30:29 - INFO - 40736 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:33:21 - INFO - 40824 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:33:21 - INFO - 40824 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:33:21 - INFO - 40824 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:33:21 - INFO - 40952 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:33:21 - INFO - 40952 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:33:21 - INFO - 40952 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:33:21 - INFO - 39812 - [plc_connector.py] - plc_connector - 160 - Stopped plc-siemens connector
+2020-07-27 03:33:21 - INFO - 39812 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:33:21 - INFO - 39812 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:33:21 - INFO - 39812 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:33:21 - INFO - 10556 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:33:21 - INFO - 10556 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:33:21 - INFO - 10556 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:33:36 - INFO - 25692 - [plc_connector.py] - plc_connector - 160 - Stopped plc-siemens connector
+2020-07-27 03:33:36 - INFO - 25692 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:33:36 - INFO - 25692 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:33:36 - INFO - 25692 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:33:36 - INFO - 40928 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:33:36 - INFO - 40928 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:33:37 - INFO - 40928 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:33:37 - INFO - 25692 - [plc_connector.py] - plc_connector - 160 - Stopped plc-siemens connector
+2020-07-27 03:33:37 - INFO - 25692 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:33:37 - INFO - 25692 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:33:37 - INFO - 25692 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:33:37 - INFO - 37652 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:33:37 - INFO - 37652 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:33:37 - INFO - 37652 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:34:43 - INFO - 36824 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:34:43 - INFO - 36824 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:34:43 - INFO - 36824 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:34:43 - INFO - 40756 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:34:43 - INFO - 40756 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:34:43 - INFO - 40756 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:34:43 - INFO - 40756 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:34:43 - INFO - 40408 - [plc_connector.py] - plc_connector - 161 - Stopped plc-siemens connector
+2020-07-27 03:34:43 - INFO - 40408 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:34:43 - INFO - 40408 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:34:43 - INFO - 40408 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:34:43 - INFO - 31896 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:34:43 - INFO - 31896 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:34:43 - INFO - 31896 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:34:43 - INFO - 31896 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:34:49 - INFO - 31896 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:34:49 - INFO - 40756 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:34:54 - INFO - 31896 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:06 - INFO - 40752 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:35:06 - INFO - 40752 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:35:06 - INFO - 40752 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:35:06 - INFO - 39836 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:35:06 - INFO - 39836 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:35:06 - INFO - 39836 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:35:06 - INFO - 39836 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:07 - INFO - 40332 - [plc_connector.py] - plc_connector - 161 - Stopped plc-siemens connector
+2020-07-27 03:35:07 - INFO - 40332 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:35:07 - INFO - 40332 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:35:07 - INFO - 40332 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:35:07 - INFO - 39960 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:35:07 - INFO - 39960 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:35:07 - INFO - 39960 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:35:07 - INFO - 39960 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:12 - INFO - 39960 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:17 - INFO - 39960 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:23 - INFO - 39960 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:28 - INFO - 29100 - [plc_connector.py] - plc_connector - 161 - Stopped plc-siemens connector
+2020-07-27 03:35:28 - INFO - 29100 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:35:28 - INFO - 29100 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:35:28 - INFO - 29100 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:35:28 - INFO - 39976 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:35:28 - INFO - 39976 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:35:28 - INFO - 39976 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:35:28 - INFO - 39976 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:29 - INFO - 29100 - [plc_connector.py] - plc_connector - 161 - Stopped plc-siemens connector
+2020-07-27 03:35:29 - INFO - 29100 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 03:35:29 - INFO - 29100 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 03:35:29 - INFO - 29100 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 03:35:29 - INFO - 39952 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:35:29 - INFO - 39952 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:35:30 - INFO - 39952 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:35:30 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:35 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:40 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:46 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:51 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:35:57 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:36:02 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:36:07 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:36:13 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:36:18 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:36:37 - INFO - 39952 - [plc_connector.py] - plc_connector - 154 - disconnetct connector plc-siemens
+2020-07-27 03:36:37 - INFO - 39952 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:36:37 - INFO - 39952 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:36:38 - ERROR - 39952 - [plc_connector.py] - plc_connector - 85 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 03:36:48 - INFO - 39952 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:36:48 - INFO - 39952 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:36:49 - ERROR - 39952 - [plc_connector.py] - plc_connector - 85 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 03:36:59 - INFO - 39952 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:36:59 - INFO - 39952 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:37:00 - ERROR - 39952 - [plc_connector.py] - plc_connector - 85 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 03:37:10 - INFO - 39952 - [plc_connector.py] - plc_connector - 125 - conneting connector plc-siemens
+2020-07-27 03:37:10 - INFO - 39952 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 03:37:10 - INFO - 39952 - [plc_connector.py] - plc_connector - 80 - connetct success plc-siemens
+2020-07-27 03:37:10 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 03:37:16 - INFO - 39952 - [plc_connector.py] - plc_connector - 130 - 11111111111111111111111111111
+2020-07-27 10:20:34 - INFO - 55748 - [plc_connector.py] - plc_connector - 27 - Starting plc-siemens connector
+2020-07-27 10:20:34 - INFO - 55748 - [plc_connector.py] - plc_connector - 35 - connector plc-siemens initialization success.
+2020-07-27 10:20:34 - INFO - 55748 - [plc_connector.py] - plc_connector - 37 - Devices in configuration file found: 新风空调1号
+新风空调2号 
+2020-07-27 10:20:34 - INFO - 51568 - [plc_connector.py] - plc_connector - 129 - conneting connector plc-siemens
+2020-07-27 10:20:34 - INFO - 51568 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 10:20:35 - ERROR - 51568 - [plc_connector.py] - plc_connector - 89 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 10:20:45 - INFO - 51568 - [plc_connector.py] - plc_connector - 129 - conneting connector plc-siemens
+2020-07-27 10:20:45 - INFO - 51568 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 10:20:46 - ERROR - 51568 - [plc_connector.py] - plc_connector - 89 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 10:20:56 - INFO - 51568 - [plc_connector.py] - plc_connector - 129 - conneting connector plc-siemens
+2020-07-27 10:20:56 - INFO - 51568 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 10:20:57 - ERROR - 51568 - [plc_connector.py] - plc_connector - 89 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 10:21:07 - INFO - 51568 - [plc_connector.py] - plc_connector - 129 - conneting connector plc-siemens
+2020-07-27 10:21:07 - INFO - 51568 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 10:21:08 - ERROR - 51568 - [plc_connector.py] - plc_connector - 89 - connetct fail plc-siemens 114.115.152.144:20102 message:[WinError 10061] 由于目标计算机积极拒绝，无法连接。
+2020-07-27 10:21:18 - INFO - 51568 - [plc_connector.py] - plc_connector - 129 - conneting connector plc-siemens
+2020-07-27 10:21:18 - INFO - 51568 - [plc_connector.py] - plc_connector - 58 - connecting  plc-siemens 114.115.152.144:20102
+2020-07-27 10:21:18 - INFO - 51568 - [plc_connector.py] - plc_connector - 84 - connetct success plc-siemens

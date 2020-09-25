@@ -1,0 +1,85 @@
+{
+  "name": "PLC Connector",
+  "host": "114.115.152.144",
+  "port": 20102,
+  "scanPeriodInMillis": 5000,
+  "slot": 0,
+  "rack": 0,
+  "plc_cpu": "s7-1500",
+  "devices": [
+    {
+      "deviceName": "新风空调1号",
+      "timeseries": [
+        {
+          "key": "入口湿度",
+          "path": "DB904.4",
+          "type": "float"
+        },
+        {
+          "key": "入口温度",
+          "path": "DB904.0",
+          "type": "float"
+        },
+        {
+          "key": "故障代码",
+          "path": "DB900.30",
+          "type": "short"
+        },
+        {
+          "key": "警告代码",
+          "path": "DB900.28",
+          "type": "short"
+        }
+      ],
+      "attributes":[
+        {
+          "key": "送风机振动故障",
+          "path": "I360.6",
+          "type": "bit"
+        },
+        {
+          "key": "送风机逻辑",
+          "path": "DB9.8",
+          "type": "int"
+        }
+      ]
+    },
+    {
+      "deviceName": "新风空调2号",
+      "timeseries": [
+        {
+          "key": "湿度",
+          "path": "DB904.20",
+          "type": "float"
+        },
+        {
+          "key": "温度",
+          "path": "DB904.16",
+          "type": "float"
+        },
+        {
+          "key": "微压计",
+          "path": "DB9.656",
+          "type": "int"
+        }
+      ],
+      "attributes":[
+        {
+          "key": "比例系数",
+          "path": "DB1103.60",
+          "type": "float"
+        },
+        {
+          "key": "微分时间",
+          "path": "DB1103.60",
+          "type": "int"
+        },
+        {
+          "key": "积分时间",
+          "path": "DB1103.64",
+          "type": "int"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "modbus-rtu\u91c7\u96c6",
+  "server": {
+    "baudrate": 9600,
+    "devices": [
+      {
+        "attributesPollPeriod": 5000,
+        "deviceName": "lundeng_fan_device",
+        "timeseries": [
+          {
+            "address": 11,
+            "bit": 0,
+            "byteOrder": "BIG",
+            "functionCode": 3,
+            "pollPeriod": 5000,
+            "registerCount": 1,
+            "tag": "pressure1",
+            "type": "short"
+          }
+        ],
+        "timeseriesPollPeriod": 1000,
+        "unitId": 1
+      }
+    ],
+    "method": "rtu",
+    "name": "modbus-rtu\u91c7\u96c6",
+    "port": "COM3",
+    "timeout": 5.0,
+    "type": "serial"
+  }
+}

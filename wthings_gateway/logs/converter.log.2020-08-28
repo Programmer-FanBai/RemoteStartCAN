@@ -1,0 +1,659 @@
+2020-08-27 16:40:38 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:39 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:40 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:41 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:42 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:43 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:44 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:45 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:46 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:47 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:48 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:49 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:50 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:51 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:52 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:53 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:40:54 - ERROR - 56680 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:11 - ERROR - 51956 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:11 - ERROR - 34672 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:12 - ERROR - 34672 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:47 - ERROR - 26084 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:47 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:48 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:49 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:50 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:51 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:52 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:53 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:54 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:55 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-27 16:43:56 - ERROR - 19948 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:19:49 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:19:49 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:19:54 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:19:54 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:19:59 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:19:59 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:04 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:04 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:09 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:09 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:14 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:14 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:19 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:19 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:24 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:24 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:29 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:29 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:34 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:34 - ERROR - 50684 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:43 - ERROR - 1756 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:43 - ERROR - 1756 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:44 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:44 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:49 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:49 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:54 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:54 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:59 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:20:59 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:04 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:04 - ERROR - 10632 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:07 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:07 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:12 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:12 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:17 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:17 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:22 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:22 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:27 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:27 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:32 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:32 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:37 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:37 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:42 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:42 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:47 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:47 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:52 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:52 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:57 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:21:57 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:22:07 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10038] 在一个非套接字上尝试了一个操作。
+NoneType: None
+2020-08-28 00:22:07 - ERROR - 26416 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 00:23:56 - ERROR - 38200 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10038] 在一个非套接字上尝试了一个操作。
+NoneType: None
+2020-08-28 00:42:44 - ERROR - 54884 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10038] 在一个非套接字上尝试了一个操作。
+NoneType: None
+2020-08-28 09:41:18 - ERROR - 40236 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10038] 在一个非套接字上尝试了一个操作。
+NoneType: None
+2020-08-28 09:52:47 - ERROR - 6060 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10038] 在一个非套接字上尝试了一个操作。
+NoneType: None
+2020-08-28 10:02:55 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:00 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:05 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:10 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:15 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:20 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:25 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:30 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:35 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:40 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:45 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:50 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:03:55 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:00 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:05 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:10 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:15 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:20 - ERROR - 21372 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:22 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:27 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:32 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:37 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:42 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:47 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:52 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:04:57 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:02 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:07 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:12 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:17 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:22 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:27 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:32 - ERROR - 57032 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:45 - ERROR - 17196 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:05:46 - ERROR - 11928 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:06:50 - ERROR - 50420 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:06:50 - ERROR - 24732 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:06:55 - ERROR - 24732 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:07:00 - ERROR - 24732 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:07:05 - ERROR - 24732 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:07:10 - ERROR - 24732 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:09:42 - ERROR - 55624 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:09:43 - ERROR - 11144 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'str' object has no attribute 'registers'
+Traceback (most recent call last):
+  File "D:\Project\wthings\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 58, in convert
+    registers = response.registers
+AttributeError: 'str' object has no attribute 'registers'
+2020-08-28 10:25:46 - ERROR - 22044 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10038] 在一个非套接字上尝试了一个操作。
+NoneType: None
+2020-08-28 10:25:46 - ERROR - 22044 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+NoneType: None

@@ -1,0 +1,189 @@
+2020-08-27 16:35:00 - INFO - 4668 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:35:00 - INFO - 21228 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:40:38 - INFO - 19172 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:40:38 - INFO - 21228 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:43:11 - INFO - 51524 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:43:11 - INFO - 42972 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:43:11 - INFO - 19908 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:43:11 - INFO - 42972 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:43:47 - INFO - 29288 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:43:47 - INFO - 52968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:43:47 - INFO - 18972 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:43:48 - INFO - 52968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:43:57 - INFO - 26348 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:43:57 - INFO - 52968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:44:43 - INFO - 47988 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:44:43 - INFO - 52968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 16:46:11 - INFO - 31632 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 16:46:11 - INFO - 52968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:29:29 - INFO - 32536 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:29:29 - INFO - 52968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:31:26 - INFO - 628 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:31:26 - INFO - 19576 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:31:26 - INFO - 17624 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:31:54 - INFO - 56444 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:31:54 - INFO - 39012 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:31:55 - INFO - 9916 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:31:55 - INFO - 39012 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:32:33 - INFO - 47952 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:32:33 - INFO - 24820 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:32:34 - INFO - 49032 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:32:34 - INFO - 24820 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:34:26 - INFO - 4692 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:34:26 - INFO - 13332 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:34:27 - INFO - 55664 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:34:27 - INFO - 13332 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:35:00 - INFO - 36368 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:35:00 - INFO - 20820 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:35:01 - INFO - 33588 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:35:01 - INFO - 20820 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:35:18 - INFO - 57216 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:35:18 - INFO - 5968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:35:19 - INFO - 53008 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:35:19 - INFO - 5968 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:35:33 - INFO - 31004 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:35:33 - INFO - 4704 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:35:34 - INFO - 12544 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:35:34 - INFO - 4704 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:36:08 - INFO - 29172 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:36:08 - INFO - 50736 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:36:08 - INFO - 17340 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:36:09 - INFO - 50736 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:36:29 - INFO - 16340 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:36:29 - INFO - 14404 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:36:29 - INFO - 26704 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:38:21 - INFO - 25768 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:38:22 - INFO - 26704 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:40:34 - INFO - 18000 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:40:35 - INFO - 37428 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:40:35 - INFO - 23636 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:40:35 - INFO - 37428 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:41:19 - INFO - 6928 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:41:19 - INFO - 21108 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:41:19 - INFO - 48052 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:41:20 - INFO - 21108 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:41:49 - INFO - 46296 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:41:50 - INFO - 21108 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-27 18:44:18 - INFO - 24800 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-27 18:44:19 - INFO - 21108 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:19:37 - INFO - 11540 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:19:37 - INFO - 52864 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:19:38 - INFO - 50224 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:19:38 - INFO - 52864 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:19:49 - INFO - 21328 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:19:49 - INFO - 52864 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:20:43 - INFO - 19852 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:20:43 - INFO - 54032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:20:44 - INFO - 17704 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:20:44 - INFO - 54032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:21:07 - INFO - 16432 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:21:07 - INFO - 54032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:22:02 - INFO - 15928 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:22:02 - INFO - 54032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:23:39 - INFO - 31836 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:23:39 - INFO - 52604 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:23:39 - INFO - 21144 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:23:55 - INFO - 34276 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:23:56 - INFO - 54896 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:23:56 - INFO - 56828 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:24:58 - INFO - 30592 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:24:58 - INFO - 7112 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:24:58 - INFO - 26488 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:25:58 - INFO - 19632 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:25:58 - INFO - 33704 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:25:59 - INFO - 8660 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:25:59 - INFO - 33704 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:26:59 - INFO - 39224 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:26:59 - INFO - 33540 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:27:00 - INFO - 29844 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:27:00 - INFO - 33540 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:27:38 - INFO - 9736 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:27:38 - INFO - 18948 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:27:38 - INFO - 22488 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:28:08 - INFO - 43936 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:28:08 - INFO - 34164 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:28:08 - INFO - 31504 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:28:59 - INFO - 51216 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:28:59 - INFO - 31504 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:30:28 - INFO - 12924 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:30:29 - INFO - 31504 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:34:16 - INFO - 20624 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:34:16 - INFO - 31504 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:38:44 - INFO - 18660 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:38:45 - INFO - 31504 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:42:38 - INFO - 47340 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:42:39 - INFO - 17000 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:42:39 - INFO - 48556 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 00:44:52 - INFO - 19096 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 00:44:52 - INFO - 48556 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:34:24 - INFO - 56856 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:34:24 - INFO - 16788 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:34:25 - INFO - 26668 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:35:11 - INFO - 49916 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:35:11 - INFO - 1632 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:35:11 - INFO - 54780 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:39:16 - INFO - 15796 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:39:16 - INFO - 54780 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:41:09 - INFO - 18052 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:41:10 - INFO - 9896 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:41:10 - INFO - 29760 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:41:21 - INFO - 13760 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:41:21 - INFO - 29760 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:43:10 - INFO - 5912 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:43:10 - INFO - 29760 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:45:32 - INFO - 51352 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:45:32 - INFO - 26552 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:45:32 - INFO - 57228 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:45:33 - INFO - 26552 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:48:54 - INFO - 19024 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:48:55 - INFO - 26552 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:49:49 - INFO - 16988 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:49:49 - INFO - 26552 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:52:36 - INFO - 20320 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:52:37 - INFO - 29440 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:52:38 - INFO - 16468 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:52:42 - INFO - 53612 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:52:43 - INFO - 16468 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:53:36 - INFO - 22636 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:53:37 - INFO - 16468 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 09:57:42 - INFO - 55756 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 09:57:43 - INFO - 16468 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:02:55 - INFO - 43936 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:02:56 - INFO - 16468 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:04:22 - INFO - 43712 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:04:23 - INFO - 16468 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:05:45 - INFO - 46012 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:05:46 - INFO - 27396 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:05:46 - INFO - 14672 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:06:50 - INFO - 56120 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:06:51 - INFO - 2720 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:06:51 - INFO - 1628 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:09:42 - INFO - 2084 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:09:42 - INFO - 22032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:09:43 - INFO - 984 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:09:43 - INFO - 22032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:09:46 - INFO - 56176 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:09:46 - INFO - 22032 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:11:20 - INFO - 1820 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:11:20 - INFO - 11428 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:11:21 - INFO - 14704 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:11:21 - INFO - 11428 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:12:48 - INFO - 44268 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:12:49 - INFO - 33260 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:12:50 - INFO - 30296 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:14:07 - INFO - 25120 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:14:08 - INFO - 56020 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:15:51 - INFO - 36204 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:15:51 - INFO - 51844 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:17:10 - INFO - 26528 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:17:11 - INFO - 26792 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:25:39 - INFO - 37220 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:25:40 - INFO - 56280 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:25:41 - INFO - 52776 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:25:41 - INFO - 56280 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:27:06 - INFO - 20380 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:27:06 - INFO - 56280 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:27:30 - INFO - 18228 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:27:31 - INFO - 56280 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1
+2020-08-28 10:29:17 - INFO - 46152 - [wt_device_mqtt.py] - wt_device_mqtt - 195 - connection SUCCESS
+2020-08-28 10:29:18 - INFO - 30528 - [wt_gateway_mqtt.py] - wt_gateway_mqtt - 175 - Subscribed to *|* with id 1

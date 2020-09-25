@@ -1,0 +1,62 @@
+2020-09-24 13:29:01 - ERROR - 30424 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] Modbus Error: [Invalid Message] Incomplete message received, expected at least 2 bytes (0 received)
+NoneType: None
+2020-09-24 13:29:01 - ERROR - 30424 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] No Response received from the remote unit/Unable to decode response
+NoneType: None
+2020-09-24 13:29:01 - ERROR - 30424 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] No Response received from the remote unit/Unable to decode response
+NoneType: None
+2020-09-24 13:29:01 - ERROR - 30424 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] No Response received from the remote unit/Unable to decode response
+NoneType: None
+2020-09-24 13:29:01 - ERROR - 30424 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] No Response received from the remote unit/Unable to decode response
+NoneType: None
+2020-09-24 13:29:01 - ERROR - 30424 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 72 - Modbus Error: [Input/Output] No Response received from the remote unit/Unable to decode response
+NoneType: None
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - 'int' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: 'int' object is not subscriptable
+2020-09-24 14:54:48 - ERROR - 29368 - [bytes_modbus_uplink_converter.py] - bytes_modbus_uplink_converter - 79 - string indices must be integers
+Traceback (most recent call last):
+  File "D:\Project\wthings-gateway\wthings_gateway\connectors\modbus\bytes_modbus_uplink_converter.py", line 37, in convert
+    configuration = data[config_data][tag]["data_sent"]
+TypeError: string indices must be integers

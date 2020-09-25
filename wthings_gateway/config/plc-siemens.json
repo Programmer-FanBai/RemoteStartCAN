@@ -1,0 +1,88 @@
+{
+  "devices": [
+    {
+      "attributes": [
+        {
+          "key": "\u9001\u98ce\u673a\u632f\u52a8\u6545\u969c",
+          "path": "I360.6",
+          "type": "bit"
+        },
+        {
+          "key": "\u9001\u98ce\u673a\u903b\u8f91",
+          "path": "DB9.8",
+          "type": "int"
+        }
+      ],
+      "deviceName": "\u65b0\u98ce\u7a7a\u8c031\u53f7",
+      "timeseries": [
+        {
+          "key": "\u5165\u53e3\u6e7f\u5ea6",
+          "path": "DB904.4",
+          "type": "float",
+          "value": "DB904.4"
+        },
+        {
+          "key": "\u5165\u53e3\u6e29\u5ea6",
+          "path": "DB904.0",
+          "type": "float",
+          "value": "DB904.0"
+        },
+        {
+          "key": "\u6545\u969c\u4ee3\u7801",
+          "path": "DB900.30",
+          "type": "short"
+        },
+        {
+          "key": "\u8b66\u544a\u4ee3\u7801",
+          "path": "DB900.28",
+          "type": "short"
+        }
+      ]
+    },
+    {
+      "attributes": [
+        {
+          "key": "\u6bd4\u4f8b\u7cfb\u6570",
+          "path": "DB1103.60",
+          "type": "float"
+        },
+        {
+          "key": "\u5fae\u5206\u65f6\u95f4",
+          "path": "DB1103.60",
+          "type": "int"
+        },
+        {
+          "key": "\u79ef\u5206\u65f6\u95f4",
+          "path": "DB1103.64",
+          "type": "int"
+        }
+      ],
+      "deviceName": "\u65b0\u98ce\u7a7a\u8c032\u53f7",
+      "timeseries": [
+        {
+          "key": "\u6e7f\u5ea6",
+          "path": "DB904.20",
+          "type": "float"
+        },
+        {
+          "key": "\u6e29\u5ea6",
+          "path": "DB904.16",
+          "type": "float"
+        },
+        {
+          "key": "\u5fae\u538b\u8ba1",
+          "path": "DB9.656",
+          "type": "int"
+        }
+      ]
+    }
+  ],
+  "host": "114.115.152.144",
+  "name": "plc-siemens",
+  "plc_cpu": "s7-1500",
+  "port": 20102,
+  "rack": 0,
+  "scanPeriodInMillis": 5000,
+  "slot": 0,
+  "timeoutInMillis": 5000
+}

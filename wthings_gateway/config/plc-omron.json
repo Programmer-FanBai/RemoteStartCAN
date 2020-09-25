@@ -1,0 +1,28 @@
+{
+  "devices": [
+    {
+      "attributes": [
+        {
+          "key": "Tag1",
+          "path": "D100",
+          "type": "bit"
+        }
+      ],
+      "deviceName": "\u6b27\u59c6\u9f99-\u8bbe\u59071",
+      "timeseries": [
+        {
+          "key": "Tag2",
+          "path": "D101",
+          "type": "bit"
+        }
+      ]
+    }
+  ],
+  "host": "127.0.0.1",
+  "name": "plc-omron",
+  "plc_cpu": "omron-fins-tcp",
+  "port": 9600,
+  "scanPeriodInMillis": 5000,
+  "timeoutInMillis": 5000,
+  "unitNo": 0
+}
