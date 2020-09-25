@@ -1,7 +1,7 @@
 connectors:
 #- {configuration: Emerson-Modbus-TCP.json, name: Emerson-Modbus-TCP, type: modbus}
 #- {configuration: Emerson-Modbus113-TCP.json, name: Emerson-Modbus113-TCP, type: modbus}
-- {configuration: AlarmLed.json, name: AlarmLed, type: modbus}
+#- {configuration: AlarmLed.json, name: AlarmLed, type: modbus}
 storage:
 #  type: memory
 #  read_records_count: 100
@@ -15,4 +15,4 @@ wthings:
   host: things.xiaobodata.com
   port: 1883
   remoteConfiguration: false
-  security: {accessToken: cH5dHX9ChCIcpAujyCmU}
+  security: {accessToken: xxxxxxxxxxxxxx}
