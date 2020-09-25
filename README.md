@@ -28,8 +28,8 @@ Waveletthings IoT Gateway provides following features:
 ### extensions # 扩展连接器
 ### gateway # 网关类
 ### storage # 持久化类
-### wt_client # client和gateway基类
-###wt_utility # 工具类
+### wt_client # 客户端和网关基类
+### wt_utility # 工具类
 
 ## use
 
@@ -48,6 +48,7 @@ wthings.security.accessToken 修改为网关访问令牌
 
 3.1 选定要连接的设备,然后在config里添加连接器文件
 3.2 然后在config/wt_gateway.yaml里添加连接器配置
+
 例如:
 ```
 connectors:
