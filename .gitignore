@@ -4,3 +4,4 @@
 /wthings_gateway/config/connected_devices.json
 /wthings_gateway/data/
 /wthings_gateway/logs/
+/wthings_gateway/config/wt_gateway.yaml
