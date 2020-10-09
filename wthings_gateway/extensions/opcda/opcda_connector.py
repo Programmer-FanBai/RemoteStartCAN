@@ -16,6 +16,7 @@ from wthings_gateway.extensions.opcda.opcda_converter import CustomOpcdaUplinkCo
 class CustomOpcdaConnector(Thread, Connector):    # Define a connector class, it should inherit from "Connector" class.
     def __init__(self, gateway,  config, connector_type):
         super().__init__()    # Initialize parents classes
+        print("config=", config)
         self.__log = log
         self.statistics = {'MessagesReceived': 0,
                            'MessagesSent': 0}    # Dictionary, will save information about count received and sent messages.
@@ -141,6 +142,7 @@ class CustomOpcdaConnector(Thread, Connector):    # Define a connector class, it
             traceback.print_exc()
         finally:
             self.opc_servers = None
+        log.info('%s has been stopped.', self.get_name())
 
     def on_attributes_update(self, content):    # Function used for processing attribute update requests from WThings
         log.debug(content)

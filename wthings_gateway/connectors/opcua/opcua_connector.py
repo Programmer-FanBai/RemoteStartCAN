@@ -13,11 +13,12 @@
 #     limitations under the License.
 
 import re
+import ctypes
 import time
+import threading
 from concurrent.futures import CancelledError, TimeoutError as FuturesTimeoutError
 from copy import deepcopy
 from random import choice
-from threading import Thread
 from string import ascii_lowercase
 import regex
 from simplejson import dumps
@@ -32,7 +33,7 @@ from wthings_gateway.connectors.connector import Connector, log
 from wthings_gateway.connectors.opcua.opcua_uplink_converter import OpcUaUplinkConverter
 
 
-class OpcUaConnector(Thread, Connector):
+class OpcUaConnector(threading.Thread, Connector):
     def __init__(self, gateway, config, connector_type):
         self._connector_type = connector_type
         self.statistics = {'MessagesReceived': 0,
@@ -191,9 +192,26 @@ class OpcUaConnector(Thread, Connector):
     def close(self):
         self.__stopped = True
         if self.__connected:
+            self.raise_exception()
             self.client.disconnect()
         self.__connected = False
         log.info('%s has been stopped.', self.get_name())
+
+    def get_id(self):
+        # returns id of the respective thread
+        if hasattr(self, '_thread_id'):
+            return self._thread_id
+        for id, thread in threading._active.items():
+            if thread is self:
+                return id
+
+    def raise_exception(self):
+        thread_id = self.get_id()
+        res = ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id,
+                                                         ctypes.py_object(SystemExit))
+        if res > 1:
+            ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id, 0)
+            print('Exception raise failure')
 
     def get_name(self):
         return self.name
@@ -435,34 +453,38 @@ class OpcUaConnector(Thread, Connector):
                     result.append(node)
             else:
                 fullpath_pattern = regex.compile(fullpath)
-                for child_node in current_node.get_children():
-                    new_node = self.client.get_node(child_node)
-                    new_node_path = '\\\\.'.join(char.split(":")[1] for char in new_node.get_path(200000, True))
-                    if self.__show_map:
-                        log.debug("SHOW MAP: Current node path: %s", new_node_path)
-                    new_node_class = new_node.get_node_class()
-                    regex_fullmatch = regex.fullmatch(fullpath_pattern, new_node_path.replace('\\\\.', '.')) or \
-                                      new_node_path.replace('\\\\', '\\') == fullpath.replace('\\\\', '\\') or \
-                                      new_node_path.replace('\\\\', '\\') == fullpath
-                    regex_search = fullpath_pattern.fullmatch(new_node_path.replace('\\\\.', '.'), partial=True) or \
-                                      new_node_path.replace('\\\\', '\\') in fullpath.replace('\\\\', '\\')
-                    if regex_fullmatch:
+                try:
+                    for child_node in current_node.get_children():
+                        new_node = self.client.get_node(child_node)
+                        new_node_path = '\\\\.'.join(char.split(":")[1] for char in new_node.get_path(200000, True))
                         if self.__show_map:
-                            log.debug("SHOW MAP: Current node path: %s - NODE FOUND", new_node_path.replace('\\\\', '\\'))
-                        result.append(new_node)
-                    elif regex_search:
-                        if self.__show_map:
-                            log.debug("SHOW MAP: Current node path: %s - NODE FOUND", new_node_path)
-                        if new_node_class == ua.NodeClass.Object:
+                            log.debug("SHOW MAP: Current node path: %s", new_node_path)
+                        new_node_class = new_node.get_node_class()
+                        regex_fullmatch = regex.fullmatch(fullpath_pattern, new_node_path.replace('\\\\.', '.')) or \
+                                          new_node_path.replace('\\\\', '\\') == fullpath.replace('\\\\', '\\') or \
+                                          new_node_path.replace('\\\\', '\\') == fullpath
+                        regex_search = fullpath_pattern.fullmatch(new_node_path.replace('\\\\.', '.'), partial=True) or \
+                                          new_node_path.replace('\\\\', '\\') in fullpath.replace('\\\\', '\\')
+                        if regex_fullmatch:
                             if self.__show_map:
-                                log.debug("SHOW MAP: Search in %s", new_node_path)
-                            self.__search_node(new_node, fullpath, result=result)
-                        elif new_node_class == ua.NodeClass.Variable:
-                            log.debug("Found in %s", new_node_path)
+                                log.debug("SHOW MAP: Current node path: %s - NODE FOUND", new_node_path.replace('\\\\', '\\'))
                             result.append(new_node)
-                        elif new_node_class == ua.NodeClass.Method and search_method:
-                            log.debug("Found in %s", new_node_path)
-                            result.append(new_node)
+                        elif regex_search:
+                            if self.__show_map:
+                                log.debug("SHOW MAP: Current node path: %s - NODE FOUND", new_node_path)
+                            if new_node_class == ua.NodeClass.Object:
+                                if self.__show_map:
+                                    log.debug("SHOW MAP: Search in %s", new_node_path)
+                                self.__search_node(new_node, fullpath, result=result)
+                            elif new_node_class == ua.NodeClass.Variable:
+                                log.debug("Found in %s", new_node_path)
+                                result.append(new_node)
+                            elif new_node_class == ua.NodeClass.Method and search_method:
+                                log.debug("Found in %s", new_node_path)
+                                result.append(new_node)
+                except Exception as e:
+                    log.error(e)
+                    self.raise_exception()
         except CancelledError:
             log.error("Request during search has been canceled by the OPC-UA server.")
         except BrokenPipeError:

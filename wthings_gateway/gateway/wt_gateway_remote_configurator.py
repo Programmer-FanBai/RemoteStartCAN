@@ -19,7 +19,7 @@ from time import time, sleep
 from logging import getLogger
 from logging.config import fileConfig
 from base64 import b64encode, b64decode
-from simplejson import dumps, loads, dump
+from simplejson import dumps, loads, dump,load
 from yaml import safe_dump
 from configparser import ConfigParser
 
@@ -61,6 +61,7 @@ class RemoteConfigurator:
                 self.__old_connectors_configs = self.__gateway.connectors_configs
                 self.__new_general_configuration_file = self.__new_configuration.get("wthings")
                 self.__new_logs_configuration = b64decode(self.__new_general_configuration_file.pop("logs")).decode('UTF-8').replace('}}', '\n')
+                print("self.__old_configuration",self.__old_configuration,"decoded_configuration",decoded_configuration)
                 if self.__old_configuration != decoded_configuration:
                     LOG.info("Remote configuration received: \n %s", decoded_configuration)
                     result = self.__process_connectors_configuration()
@@ -86,15 +87,19 @@ class RemoteConfigurator:
             if not self.in_process:
                 self.in_process = True
                 conf = process_extend(configuration, self.__old_general_configuration_file, self.__old_logs_configuration)
-                LOG.info("process_configuration extend")
                 self.__new_configuration = conf
-                decoded_configuration = dumps(conf)
-
+                print("2",conf,"\n")
+                #decoded_configuration = b64encode(dumps(conf).encode())
+                decoded_configuration = dumps(conf,sort_keys=True)
+                # if self.__old_configuration:
+                #     decoded_old_configuration = dumps(loads(b64decode(self.__old_configuration)),sort_keys=True)
+                # else:
+                #     decoded_old_configuration = None
                 self.__old_connectors_configs = self.__gateway.connectors_configs
                 self.__new_general_configuration_file = self.__new_configuration.get("wthings")
                 self.__new_logs_configuration = b64decode(self.__new_general_configuration_file.pop("logs")).decode('UTF-8').replace('}}', '\n')
                 if self.__old_configuration != decoded_configuration:
-                    LOG.info("Remote configuration received: \n %s", decoded_configuration)
+                    #LOG.info("Remote configuration received: \n %s", decoded_configuration)
                     result = self.__process_connectors_configuration()
                     self.in_process = False
                     if result:
@@ -135,6 +140,7 @@ class RemoteConfigurator:
         LOG.info("Processing remote connectors configuration...")
         if self.__apply_new_connectors_configuration():
             self.__write_new_configuration_files()
+            return True
         self.__apply_storage_configuration()
         if self.__safe_apply_connection_configuration():
             LOG.info("Remote configuration has been applied.")
@@ -199,6 +205,9 @@ class RemoteConfigurator:
 
     def __write_new_configuration_files(self):
         try:
+            print("__new_connectors_configs=", self.__new_connectors_configs)
+            print("__gateway.connectors_configs", self.__gateway.connectors_configs)
+            return
             self.__new_connectors_configs = self.__new_connectors_configs if self.__new_connectors_configs else self.__gateway.connectors_configs
             new_connectors_files = []
             for connector_type in self.__new_connectors_configs:
@@ -206,6 +215,7 @@ class RemoteConfigurator:
                     for connector_file in connector_config_section["config"]:
                         connector_config = connector_config_section["config"][connector_file]
                         with open(self.__gateway.get_config_path() + connector_file, "w", encoding="UTF-8") as config_file:
+                            print("111111connector_config=", connector_config)
                             dump(connector_config, config_file, sort_keys=True, indent=2)
                         new_connectors_files.append(connector_file)
                         LOG.debug("Saving new configuration for \"%s\" connector to file \"%s\"", connector_type,

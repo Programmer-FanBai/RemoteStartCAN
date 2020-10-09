@@ -141,7 +141,6 @@ class PLCConnector(Thread, Connector):  # Define a connector class, it should in
                 if self.is_connected():
                     ping_result = self.plc.GetAvailableSocket()
                     if ping_result.IsSuccess:
-                        print(self.name, self.getName(), "start-----------", datetime.datetime.now())
                         start_ts = time.time()
                         for device in self.devices:
                             try:
@@ -154,10 +153,10 @@ class PLCConnector(Thread, Connector):  # Define a connector class, it should in
                                         if result.IsSuccess:
                                             data_from_device[m][j["key"]] = result.Content
                                 converted_data = self.devices[device]['converter'].convert(self.devices[device]['device_config'], data_from_device)
-                                print("converted_data=", converted_data)
                                 if self.__gateway:
                                     self.__gateway.send_to_storage(self.get_name(), converted_data)
                             except Exception as e:
+                                print("", self.__available_functions.get(j.get("type"), self.plc.ReadInt16))
                                 log.exception(e)
                                 raise e
                         print(self.name, self.getName(), "end-----------", datetime.datetime.now(), int((time.time()-start_ts)*1000))

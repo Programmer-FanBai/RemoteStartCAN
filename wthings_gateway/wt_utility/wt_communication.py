@@ -2353,7 +2353,7 @@ class NetworkDeviceBase(NetworkDoubleBase):
             return ByteTransformHelper.GetResultFromArray( self.ReadDouble(address, 1) )
         else:
             return ByteTransformHelper.GetResultFromBytes( self.Read( address, length * self.WordLength * 4 ), lambda m: self.byteTransform.TransDoubleArray( m, 0, length ) )
-    def ReadString( self, address, length, encoding = None ):
+    def ReadString( self, address, length=1, encoding = None ):
         '''读取设备的字符串数据，编码为指定的编码信息，如果不指定，那么就是ascii编码'''
         if encoding == None:
             return self.ReadString( address, length, 'ascii' )

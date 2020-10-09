@@ -283,11 +283,15 @@ class WTGatewayService:
             log.error("Connectors - not found! Check your configuration!")
             main_config["wthings"]["remoteConfiguration"] = True
             log.info("Remote configuration is enabled forcibly!")
+        print("*************", self.connectors_configs)
 
     def _connect_with_connectors(self):
+        print("111self.__gateway.connectors_configs", self.connectors_configs)
         for connector_type in self.connectors_configs:
+            print("connector_type=", connector_type)
             for connector_config in self.connectors_configs[connector_type]:
                 for config in connector_config["config"]:
+                    print("config=", config)
                     connector = None
                     try:
                         if connector_config["config"][config] is not None:
