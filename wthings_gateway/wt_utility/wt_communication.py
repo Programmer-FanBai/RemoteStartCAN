@@ -1929,8 +1929,12 @@ class NetworkBase:
         data = bytearray()
         try:
             while totle < length:
-                data.extend( socket.recv( length-totle ))
+                data.extend(socket.recv(length-totle))
                 totle = len(data)
+                if totle == 0:
+                    result = OperateResult()
+                    result.Message = str("recv = " + totle)
+                    return result
             return OperateResult.CreateSuccessResult(data)
         except Exception as e:
             result = OperateResult()
@@ -1955,7 +1959,7 @@ class NetworkBase:
     def ReceiveMessage( self, socket, timeOut, netMsg ):
         '''接收一条完整的数据，使用异步接收完成，包含了指令头信息'''
         result = OperateResult()
-        headResult = self.Receive( socket, netMsg.ProtocolHeadBytesLength() )
+        headResult = self.Receive(socket,netMsg.ProtocolHeadBytesLength())
         if headResult.IsSuccess == False:
             result.CopyErrorFromOther(headResult)
             return result
@@ -2132,16 +2136,15 @@ class NetworkDoubleBase(NetworkBase):
         return result
     def ConnectClose( self ):
         '''在长连接模式下，断开服务器的连接，并切换到短连接模式'''
-        result = OperateResult( )
+        result = OperateResult()
         self.isPersistentConn = False
-
         self.interactiveLock.acquire()
         # 额外操作
-        result = self.ExtraOnDisconnect( self.CoreSocket )
+        result = self.ExtraOnDisconnect(self.CoreSocket)
         # 关闭信息
         if self.CoreSocket != None : self.CoreSocket.close()
         self.CoreSocket = None
-        self.interactiveLock.release( )
+        self.interactiveLock.release()
         return result
 
 
@@ -2151,7 +2154,8 @@ class NetworkDoubleBase(NetworkBase):
         return OperateResult.CreateSuccessResult()
     def ExtraOnDisconnect( self, socket ):
         '''在将要和服务器进行断开的情况下额外的操作，需要根据对应协议进行重写'''
-        return OperateResult.CreateSuccessResult()
+        result = OperateResult.CreateSuccessResult()
+        return result
 
     def GetAvailableSocket( self ):
         '''获取本次操作的可用的网络套接字'''
@@ -2237,17 +2241,20 @@ class NetworkDoubleBase(NetworkBase):
         self.iNetMessage.SendBytes = send
         sendResult = self.Send( socket, send )
         if sendResult.IsSuccess == False:
-            if socket!= None : socket.close( )
-            return OperateResult.CreateFailedResult( sendResult )
+            if socket!= None : socket.close()
+            return OperateResult.CreateFailedResult(sendResult)
 
         # 接收超时时间大于0时才允许接收远程的数据
         if (self.receiveTimeOut >= 0):
             # 接收数据信息
-            resultReceive = self.ReceiveMessage(socket, 10000, self.iNetMessage)
+            try:
+                resultReceive = self.ReceiveMessage(socket, 10000, self.iNetMessage)
+            except Exception as e:
+                print(e)
             if resultReceive.IsSuccess == False:
-                socket.close( )
+                socket.close()
                 return OperateResult( msg = "Receive data timeout: " + str(self.receiveTimeOut ) + " Msg:"+ resultReceive.Message)
-            return OperateResult.CreateSuccessResult( resultReceive.Content.HeadBytes, resultReceive.Content.ContentBytes )
+            return OperateResult.CreateSuccessResult(resultReceive.Content.HeadBytes, resultReceive.Content.ContentBytes)
         else:
             return OperateResult.CreateSuccessResult( bytearray(0), bytearray(0) )
 
@@ -5192,9 +5199,9 @@ class AllenBradleyNet(NetworkDeviceBase):
     def ExtraOnDisconnect( self, socket):
         '''A next step handshake agreement is required before disconnecting the Allenbradley plc'''
         # Unregister session Information
-        read = self.ReadFromCoreServerBase( socket, self.UnRegisterSessionHandle( ) )
-        if read.IsSuccess == False : return read
-
+        read = self.ReadFromCoreServerBase(socket, self.UnRegisterSessionHandle())
+        if read.IsSuccess == False:
+            return read
         return OperateResult.CreateSuccessResult()
     def SetSlot(self, Slot):
         self.Slot = Slot

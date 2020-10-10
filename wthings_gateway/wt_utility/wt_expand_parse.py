@@ -446,7 +446,6 @@ def process_extend(configuration, old_general_configuration_file, old_logs_confi
     # conf["wthings"]["connectors"] 是配置文件
     if connectors:
        conf["wthings"]["connectors"] = connectors
-    print("1.",conf,"\n")
     return conf
 
 

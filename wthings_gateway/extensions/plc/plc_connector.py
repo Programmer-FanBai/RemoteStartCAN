@@ -42,6 +42,15 @@ class PLCConnector(Thread, Connector):  # Define a connector class, it should in
             host = self.__config.get('host', '127.0.0.1')
             port = self.__config.get('port', 102)
             plc_cpu = self.__config.get('plc_cpu', "s7-1200")
+            if self.__config.get('name',None) == 'plc-melses':
+                if "melsec-mc-binary" == self.__config.get("type",None):
+                    plc_cpu = "melsec-mc-binary"
+                elif "melsec-mc-ascii" == self.__config.get("type",None):
+                    plc_cpu = "melsec-mc-ascii"
+                elif "melsec-a1e" == self.__config.get("type",None):
+                    plc_cpu = "melsec-a1e"
+            elif self.__config.get('name',None) == 'plc-ab':
+                plc_cpu = "allenbradley-logix-tcp"
             # omron-fins-tcp 欧姆龙 fins tcp
             #
             if plc_cpu == "s7-200":
@@ -151,15 +160,15 @@ class PLCConnector(Thread, Connector):  # Define a connector class, it should in
                                     for i, j in enumerate(device_config[m]):
                                         result = self.__available_functions.get(j.get("type"), self.plc.ReadInt16)(j["path"])
                                         if result.IsSuccess:
+                                            #print(self.name, self.getName(), "start-----------", datetime.datetime.now())
                                             data_from_device[m][j["key"]] = result.Content
                                 converted_data = self.devices[device]['converter'].convert(self.devices[device]['device_config'], data_from_device)
                                 if self.__gateway:
                                     self.__gateway.send_to_storage(self.get_name(), converted_data)
                             except Exception as e:
-                                print("", self.__available_functions.get(j.get("type"), self.plc.ReadInt16))
                                 log.exception(e)
                                 raise e
-                        print(self.name, self.getName(), "end-----------", datetime.datetime.now(), int((time.time()-start_ts)*1000))
+                        #print(self.name, self.getName(), "end-----------", datetime.datetime.now(), int((time.time()-start_ts)*1000))
                         time.sleep(self.__config.get('scanPeriodInMillis', 5000)/1000)
                     else:
                         self.connected = False
