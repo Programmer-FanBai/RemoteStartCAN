@@ -210,13 +210,15 @@ class PLCConnector(Thread, Connector):  # Define a connector class, it should in
         pass
 
 if __name__ == '__main__':
-    plc_1500 = SiemensS7Net(SiemensPLCS.S1500, "114.115.152.144", 20102)
-    result = plc_1500.ConnectServer()
-    if result.IsSuccess:
-        print("连接成功")
-        sensor_exit_h = plc_1500.ReadInt16("DB1320.2")
-        print(sensor_exit_h.ErrorCode)
-        print(sensor_exit_h.Message)
-        print(sensor_exit_h.Content)
-    else:
-        print("连接失败")
+    # plc_1500 = SiemensS7Net(SiemensPLCS.S1500, "114.115.152.144", 20102)
+    # result = plc_1500.ConnectServer()
+    # if result.IsSuccess:
+    #     print("连接成功")
+    #     sensor_exit_h = plc_1500.ReadInt16("DB1320.2")
+    #     print(sensor_exit_h.ErrorCode)
+    #     print(sensor_exit_h.Message)
+    #     print(sensor_exit_h.Content)
+    # else:
+    #     print("连接失败")
+    print(b'\x00\x00\x00\x00\x01\x00\x02\x00\x00\x00\x00\x00\xb2\x00j\x00\xcc\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00SB1021\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'.hex())
+    print(b'f\x00z\x00\x10\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00'.hex())
