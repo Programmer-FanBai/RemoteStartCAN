@@ -1,0 +1,148 @@
+{
+  "interface": "socketcan",
+  "channel": "can0",
+  "backend": {
+    "fd": false
+  },
+  "reconnectPeriod": 5,
+  "devices": [
+    {
+      "name": "Car",
+      "sendDataOnlyOnChange": false,
+      "enableUnknownRpc": true,
+      "strictEval": false,
+      "attributes": [
+        {
+          "key": "isDriverDoorOpened",
+          "nodeId": 41,
+          "value": "4:1:int",
+          "expression": "bool(value & 0b00000100)"
+        },
+        {
+          "key": "isAirConditioneroOn",
+          "nodeId": 42,
+          "value": "4:1:int",
+          "expression": "bool(value & 0b00000100)"
+        },
+        {
+          "key": "isLightsOn",
+          "nodeId": 43,
+          "value": "4:1:int",
+          "expression": "bool(value & 0b00000100)"
+        },
+        {
+          "key": "isSkylightOpened",
+          "nodeId": 44,
+          "value": "4:1:int",
+          "expression": "bool(value & 0b00000100)"
+        },
+        {
+          "key": "isAirbagOpened",
+          "nodeId": 45,
+          "value": "4:1:int",
+          "expression": "bool(value & 0b00000100)"
+        }
+      ],
+      "timeseries": [
+        {
+          "key": "rpm",
+          "nodeId": 1918,
+          "isExtendedId": true,
+          "command": "2:2:big:48059",
+          "value": "4:2:big:int",
+          "expression": "value / 4",
+          "polling": {
+            "type": "always",
+            "period": 5,
+            "dataInHex": "bbbb bbbb aaaa bbbb"
+          }
+        },
+        {
+          "key": "milliage",
+          "nodeId": 1919,
+          "isExtendedId": true,
+          "command": "2:2:big:48060",
+          "value": "4:2:little:int",
+          "expression": "value * 10",
+          "polling": {
+            "type": "always",
+            "period": 30,
+            "dataInHex": "aa bb cc dd ee ff aa bb"
+          }
+        },
+        {
+          "key": "Rise",
+          "nodeId": 1920,
+          "isExtendedId": true,
+          "command": "2:2:big:48061",
+          "value": "4:2:big:int",
+          "expression": "value / 4",
+          "polling": {
+            "type": "always",
+            "period": 5,
+            "dataInHex": "bbbb bbbb aaaa bbbb"
+          }
+        },
+        {
+          "key": "Current",
+          "nodeId": 1921,
+          "isExtendedId": true,
+          "command": "2:2:big:48062",
+          "value": "4:2:big:int",
+          "expression": "value / 4",
+          "polling": {
+            "type": "always",
+            "period": 5,
+            "dataInHex": "bbbb bbbb aaaa bbbb"
+          }
+        },
+        {
+          "key": "temperature",
+          "nodeId": 1922,
+          "isExtendedId": true,
+          "command": "2:2:big:48063",
+          "value": "4:2:big:int",
+          "expression": "value / 4",
+          "polling": {
+            "type": "always",
+            "period": 5,
+            "dataInHex": "bbbb bbbb aaaa bbbb"
+          }
+        }
+      ],
+      "attributeUpdates": [
+        {
+          "attributeOnWaveletThings": "softwareVersion",
+          "nodeId": 64,
+          "isExtendedId": true,
+          "dataLength": 4,
+          "dataExpression": "value + 5",
+          "dataByteorder": "little"
+        }
+      ],
+      "serverSideRpc": [
+        {
+          "method": "sendSameData",
+          "nodeId": 4,
+          "isExtendedId": true,
+          "isFd": true,
+          "bitrateSwitch": true,
+          "dataInHex": "aa bb cc dd ee ff    aa bb aa bb cc d ee ff"
+        },
+        {
+          "method": "setLightLevel",
+          "nodeId": 5,
+          "dataLength": 2,
+          "dataByteorder": "little",
+          "dataBefore": "00AA"
+        },
+        {
+          "method": "setSpeed",
+          "nodeId": 16,
+          "dataAfter": "0102",
+          "dataExpression": "userSpeed if maxAllowedSpeed > userSpeed else maxAllowedSpeed"
+        }
+      ]
+    }
+  ]
+}

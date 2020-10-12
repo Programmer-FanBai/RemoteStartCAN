@@ -1,0 +1,172 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_:
+VAL_TABLE_ BrakePedalPressed 1 "Push" 0 "Realse" ;
+VAL_TABLE_ EPBStatus 1 "ON" 0 "OFF" ;
+VAL_TABLE_ brake_ONOFF 1 "caixia" 0 "songkai" ;
+VAL_TABLE_ brake_onoff 1 "caixia" 0 "songkai" ;
+VAL_TABLE_ sport 128 "ON" 0 "OFF" ;
+VAL_TABLE_ gear 6 "L" 4 "D" 3 "N" 2 "R" 1 "P" ;
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ S17D_45 : 0|16@0- (1,0) [0|0] "" Vector__XXX
+
+BO_ 12 New_Message_32: 8 Vector__XXX
+ SG_ New_Signal_40 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 11 New_Message_31: 8 Vector__XXX
+ SG_ New_Signal_39 : 36|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 10 New_Message_30: 8 Vector__XXX
+ SG_ New_Signal_38 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 9 New_Message_29: 8 Vector__XXX
+ SG_ New_Signal_37 : 7|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 8 New_Message_28: 8 Vector__XXX
+ SG_ New_Signal_36 : 10|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 7 New_Message_27: 8 Vector__XXX
+ SG_ New_Signal_35 : 13|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 6 New_Message_26: 8 Vector__XXX
+ SG_ New_Signal_34 : 7|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 5 New_Message_25: 8 Vector__XXX
+ SG_ New_Signal_33 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 4 New_Message_24: 8 Vector__XXX
+ SG_ New_Signal_32 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 3 New_Message_23: 8 Vector__XXX
+ SG_ New_Signal_31 : 12|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 2 New_Message_22: 8 Vector__XXX
+ SG_ New_Signal_30 : 11|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 1 New_Message_21: 8 Vector__XXX
+ SG_ New_Signal_29 : 36|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 0 New_Message_20: 8 Vector__XXX
+ SG_ New_Signal_28 : 31|8@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 453 X1C5: 8 Vector__XXX
+
+BO_ 1516 Charging_current_voltage: 8 Vector__XXX
+ SG_ outside_temper : 39|8@0+ (0.5,40) [40|167.5] "" Vector__XXX
+ SG_ Charging_voltage : 31|8@0+ (2,0) [0|510] "" Vector__XXX
+ SG_ charging_current : 23|8@0+ (0.2,0) [0|51] "" Vector__XXX
+
+BO_ 241 Brakeposition_X: 8 Vector__XXX
+ SG_ Brakeposition_X : 15|8@0+ (1,-2) [-2|253] "" Vector__XXX
+
+BO_ 211 Motortorque_D: 2 Vector__XXX
+ SG_ Motortorque_D : 7|16@0+ (0.289177,-3258.157259) [-360|360] "" Vector__XXX
+
+BO_ 209 BrakePressure: 8 Vector__XXX
+ SG_ BrakePressure : 3|12@0+ (3,0) [0|12285] "" Vector__XXX
+
+BO_ 560 EPBStatus: 8 Vector__XXX
+ SG_ EPBStatus : 12|1@0+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 840 WheelSpdfRront: 4 Vector__XXX
+ SG_ FRWheelSpd : 23|16@0+ (0.0311,0) [0|2038.1385] "" Vector__XXX
+ SG_ FLWheelSpd : 7|16@0+ (0.0311,0) [0|2038.1385] "" Vector__XXX
+
+BO_ 842 WheelSpdRear: 4 Vector__XXX
+ SG_ RRWheelSpd : 23|16@0+ (0.0311,0) [0|255] "" Vector__XXX
+ SG_ RLWheelSpd : 7|16@0+ (0.0311,0) [0|2038.1385] "" Vector__XXX
+
+BO_ 711 BatteryVoltageCurrent: 8 Vector__XXX
+ SG_ BatteryCurrent : 12|13@0- (0.15,0) [-614.4|614.25] "" Vector__XXX
+ SG_ BatteryVoltage : 31|12@0+ (0.125,0) [0|511.875] "" Vector__XXX
+
+BO_ 508 HalfshaftTorque_guss: 8 Vector__XXX
+ SG_ HalfshaftTorque_guss : 7|16@0- (0.705,0) [-23101.44|23100.735] "" Vector__XXX
+
+BO_ 188 Motorspeed: 8 Vector__XXX
+ SG_ Motorspeed : 38|15@0- (1,0) [-16384|16383] "" Vector__XXX
+
+BO_ 381 torqueguss_wrong: 6 Vector__XXX
+ SG_ torqueguss_wrong : 35|12@0- (0.1,0) [-3276.8|3276.7] "" Vector__XXX
+
+BO_ 170 Wheelaxletorque_Motorque_R: 8 Vector__XXX
+ SG_ Wheelaxletorque_guss : 7|16@0- (2,-22551.1) [-88087.1|42982.9] "" Vector__XXX
+ SG_ Motortorque_R : 47|16@0- (-0.27441,5900.82) [-3090.77247|14892.68688] "" Vector__XXX
+
+BO_ 1001 veh_Speed: 8 Vector__XXX
+ SG_ veh_speed : 7|16@0- (0.0155176027,0) [-508.4808052736|508.4652876709] "" Vector__XXX
+
+BO_ 500 SportMod: 8 Vector__XXX
+ SG_ sport : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 501 GEAR: 8 Vector__XXX
+ SG_ gear : 24|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 485 steerwheel: 8 Vector__XXX
+ SG_ SteeringWheelRate : 27|12@0- (0.5,0) [-1024|1023.5] "" Vector__XXX
+ SG_ SteeringWheelAngle : 15|16@0- (0.0625,0) [-2048|2047.9375] "" Vector__XXX
+
+BO_ 201 Braped_ONOFF: 6 Vector__XXX
+ SG_ brake_ONOFF : 47|8@0+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 190 ACCpedal: 6 Vector__XXX
+ SG_ Brakeposition : 15|8@0+ (0.45,0) [0|114.75] "%" Vector__XXX
+ SG_ accpedal : 23|8@0+ (0.39215,0) [0|99.99825] "" Vector__XXX
+
+
+
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+VAL_ 560 EPBStatus 1 "ON" 0 "OFF" ;
+VAL_ 500 sport 128 "ON" 0 "OFF" ;
+VAL_ 501 gear 5 "Regen" 6 "L" 4 "D" 3 "N" 2 "R" 1 "P" ;
+VAL_ 201 brake_ONOFF 1 "push" 0 "release" ;
+
