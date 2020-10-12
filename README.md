@@ -52,5 +52,5 @@ wthings.security.accessToken 修改为网关访问令牌
 例如:
 ```
 connectors:
-- {configuration: AlarmLed.json, name: AlarmLed, type: modbus}
+- {configuratimon: AlarmLed.json, nae: AlarmLed, type: modbus}
 ```

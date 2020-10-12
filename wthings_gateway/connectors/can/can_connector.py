@@ -19,9 +19,10 @@ from threading import Thread
 from copy import copy
 from random import choice
 from string import ascii_lowercase
-
+import cantools
 from wthings_gateway.wt_utility.wt_utility import WTUtility
-
+import datetime
+from wthings_gateway.gateway.wt_gateway_service import dumps
 try:
     from can import Notifier, BufferedReader, Message, CanError, ThreadSafeBus
 except ImportError:
@@ -37,7 +38,7 @@ from wthings_gateway.connectors.connector import Connector, log
 class CanConnector(Connector, Thread):
     CMD_REGEX = r"^(\d{1,2}):(\d{1,2}):?(big|little)?:(\d+)$"
     VALUE_REGEX = r"^(\d{1,2}):(\d{1,2}):?(big|little)?:(bool|boolean|int|long|float|double|string):?([0-9A-Za-z-_]+)?$"
-
+    DBC_FILE= cantools.database.load_file('./Boltpowertrain.dbc')
     NO_CMD_ID = "no_cmd"
     UNKNOWN_ARBITRATION_ID = -1
 
@@ -114,6 +115,7 @@ class CanConnector(Connector, Thread):
 
             # Converter expects dictionary as the second parameter so pack an attribute value to a dictionary
             data = self.__converters[content["device"]]["downlink"].convert(attr_config, {"value": attr_value})
+
             if data is None:
                 log.error("[%s] Failed to update '%s' attribute for '%s' device: data conversion failure",
                           self.get_name(), attr_name, content["device"])
@@ -195,11 +197,11 @@ class CanConnector(Connector, Thread):
                 # It is expected that after these operations most likely the bus is up.
                 self.__connected = True
                 self.__reconnect_count = 0
-
                 while not self.__stopped:
                     message = reader.get_message()
                     if message is not None:
-                        # log.debug("[%s] New CAN message received %s", self.get_name(), message)
+                        log.debug("[%s] New CAN message received %s", self.get_name(), message)
+
                         self.__process_message(message)
                     self.__check_if_error_happened()
             except Exception as e:
@@ -295,6 +297,19 @@ class CanConnector(Connector, Thread):
         return config
 
     def __process_message(self, message):
+        try:
+            dbc_data = self.DBC_FILE.decode_message(message.arbitration_id, message.data)
+            if dbc_data:
+                try:
+                    data ={'attributes': [], 'telemetry': [], 'deviceName': 'Car', 'deviceType': 'can'}
+                    for k, v  in dbc_data.items():
+                        item = { k : v}
+                        data["telemetry"] = [{ "ts": int(time.time() * 1000),"values": item}]
+                        self.__gateway.send_to_storage(self.get_name(), data)
+                except  Exception as r:
+                    print(r)
+        except:
+            pass
         if message.arbitration_id not in self.__nodes:
             # Too lot log messages in case of high message generation frequency
             log.debug("[%s] Ignoring CAN message. Unknown arbitration_id %d", self.get_name(), message.arbitration_id)
@@ -302,8 +317,9 @@ class CanConnector(Connector, Thread):
 
         cmd_conf = self.__commands[message.arbitration_id]
         if cmd_conf is not None:
-            cmd_id = int.from_bytes(message.data[cmd_conf["start"]:cmd_conf["start"] + cmd_conf["length"]],
-                                    cmd_conf["byteorder"])
+            cmd_id = cmd_conf["value"]
+            # cmd_id = int.from_bytes(message.data[cmd_conf["start"]:cmd_conf["start"] + cmd_conf["length"]],
+            #                         cmd_conf["byteorder"])
         else:
             cmd_id = self.NO_CMD_ID
 
@@ -316,11 +332,11 @@ class CanConnector(Connector, Thread):
 
         parsing_conf = self.__nodes[message.arbitration_id][cmd_id]
         data = self.__converters[parsing_conf["deviceName"]]["uplink"].convert(parsing_conf["configs"], message.data)
+
         if data is None or not data.get("attributes", []) and not data.get("telemetry", []):
             log.warning("[%s] Failed to process CAN message (id=%d,cmd_id=%s): data conversion failure",
                      self.get_name(), message.arbitration_id, cmd_id)
             return
-
         self.__check_and_send(parsing_conf, data)
 
     def __check_and_send(self, conf, new_data):
@@ -339,8 +355,8 @@ class CanConnector(Connector, Thread):
             to_send["deviceType"] = conf["deviceType"]
 
             log.debug("[%s] Pushing to WT server '%s' device data: %s", self.get_name(), conf["deviceName"], to_send)
-
             self.__gateway.send_to_storage(self.get_name(), to_send)
+
             self.statistics['MessagesSent'] += 1
         else:
             log.debug("[%s] '%s' device data has not been changed", self.get_name(), conf["deviceName"])
@@ -460,7 +476,6 @@ class CanConnector(Connector, Thread):
                             "deviceType": device_type,
                             "sendOnChange": device_config.get("sendDataOnlyOnChange", self.DEFAULT_SEND_IF_CHANGED),
                             "configs": []}
-
                     self.__nodes[node_id][cmd_id]["configs"].append(msg_config)
                     self.__devices[device_name][wt_item][wt_key] = None
 

@@ -13,9 +13,8 @@
 #     limitations under the License.
 
 from sys import getsizeof, executable, argv
-from os import listdir, path, execv, pathsep, system
-from time import time, sleep
-import logging
+from os import listdir, path, execv, pathsep, system, environ
+from time import sleep, time
 import logging.config
 import logging.handlers
 from queue import Queue
@@ -26,7 +25,6 @@ from yaml import safe_load
 from simplejson import load, dumps, loads
 import pyrsistent
 from importlib import util
-
 from wthings_gateway.gateway.wt_client import WTClient
 from wthings_gateway.gateway.wt_logger import WTLoggerHandler
 from wthings_gateway.storage.memory_event_storage import MemoryEventStorage
@@ -37,7 +35,6 @@ from wthings_gateway.wt_utility.wt_utility import WTUtility
 
 log = logging.getLogger('service')
 main_handler = logging.handlers.MemoryHandler(-1)
-
 DEFAULT_CONNECTORS = {
             "mqtt": "MqttConnector",
             "modbus": "ModbusConnector",
@@ -84,7 +81,7 @@ class WTGatewayService:
         self.__connected_devices_file = "connected_devices.json"
         self.wt_client = WTClient(config["wthings"])
         self.wt_client.connect()
-        # print("00000000000000000000000000000000000000000")
+
         # self.subscribe_to_required_topics()
         self.__subscribed_to_rpc_topics = False
         if logging_error is not None:
@@ -98,6 +95,7 @@ class WTGatewayService:
         self.main_handler.setTarget(self.remote_handler)
         self._default_connectors = DEFAULT_CONNECTORS
         self._implemented_connectors = {}
+
         self._event_storage_types = {
             "memory": MemoryEventStorage,
             "file": FileEventStorage,
@@ -329,7 +327,6 @@ class WTGatewayService:
             data["telemetry"] = telemetry_with_ts
         else:
             data["telemetry"] = {"ts": int(time() * 1000), "values": telemetry}
-
         json_data = dumps(data)
         save_result = self._event_storage.put(json_data)
         if not save_result:

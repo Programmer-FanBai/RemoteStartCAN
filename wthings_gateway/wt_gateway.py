@@ -2,8 +2,8 @@
 # # -*- coding: UTF-8 -*-
 
 from os import path, listdir, mkdir, curdir
-# import sys
-# sys.path.append("D:/Project/wthings-gateway")
+import sys
+sys.path.append("/tmp/pycharm_project_382")
 from wthings_gateway.gateway.wt_gateway_service import WTGatewayService
 
 
