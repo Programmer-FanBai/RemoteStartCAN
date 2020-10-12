@@ -37,13 +37,15 @@ from pymodbus.exceptions import ConnectionException
 from wthings_gateway.connectors.connector import Connector, log
 from wthings_gateway.connectors.modbus.bytes_modbus_uplink_converter import BytesModbusUplinkConverter
 from wthings_gateway.connectors.modbus.bytes_modbus_downlink_converter import BytesModbusDownlinkConverter
-
+from queue import Queue, Full, Empty
 
 class ModbusConnector(Connector, threading.Thread):
     def __init__(self, gateway, config, connector_type):
         self.statistics = {'MessagesReceived': 0,
                            'MessagesSent': 0}
         super().__init__()
+        self.__events_queue = Queue(10000)
+        self.__event_pack = []
         self.__gateway = gateway
         self._connector_type = connector_type
         self.__master = None
@@ -76,6 +78,11 @@ class ModbusConnector(Connector, threading.Thread):
         while True:
             time.sleep(.01)
             self.__process_devices()
+            event = self.get_event_pack()
+            if event:
+                content, rpc_command_config = event[0]
+                self.__process_rpc_request(content, rpc_command_config)
+                self.event_pack_processing_done()
             if self.__stopped:
                 break
 
@@ -128,6 +135,7 @@ class ModbusConnector(Connector, threading.Thread):
                             for interested_data in range(len(self.__devices[device]["config"][config_data])):
                                 current_data = self.__devices[device]["config"][config_data][interested_data]
                                 current_data["deviceName"] = device
+                                # print("current_data=", current_data, "unit_id=", unit_id)
                                 input_data = self.__function_to_device(current_data, unit_id)
                                 # if not isinstance(input_data, ReadRegistersResponseBase) and input_data.isError():
                                 #     log.exception(input_data)
@@ -259,6 +267,7 @@ class ModbusConnector(Connector, threading.Thread):
                                                                config.get("objectsCount", config.get("registersCount",  config.get("registerCount", 1))),
                                                                unit=unit_id)
         elif function_code in (5, 6, 15, 16):
+            print("write= ", threading.current_thread().ident)
             result = self.__available_functions[function_code](config["address"],
                                                                config["payload"],
                                                                unit=unit_id)
@@ -271,17 +280,20 @@ class ModbusConnector(Connector, threading.Thread):
         return result
 
     def server_side_rpc_handler(self, content):
+        print("content=", content)
         try:
             if content.get("device") is not None:
                 log.debug("Modbus connector received rpc request for %s with content: %s", content["device"], content)
                 if isinstance(self.__devices[content["device"]]["config"]["rpc"], dict):
                     rpc_command_config = self.__devices[content["device"]]["config"]["rpc"].get(content["data"]["method"])
                     if rpc_command_config is not None:
-                        self.__process_rpc_request(content, rpc_command_config)
+                        self.put((content, rpc_command_config))
+                        # self.__process_rpc_request(content, rpc_command_config)
                 elif isinstance(self.__devices[content["device"]]["config"]["rpc"], list):
                     for rpc_command_config in self.__devices[content["device"]]["config"]["rpc"]:
                         if rpc_command_config["tag"] == content["data"]["method"]:
-                            self.__process_rpc_request(content, rpc_command_config)
+                            self.put((content, rpc_command_config))
+                            # self.__process_rpc_request(content, rpc_command_config)
                             break
                 else:
                     log.error("Received rpc request, but method %s not found in config for %s.",
@@ -304,8 +316,10 @@ class ModbusConnector(Connector, threading.Thread):
                 rpc_command_config["payload"] = self.__devices[content["device"]]["downlink_converter"].convert(
                     rpc_command_config, content)
             response = None
+            print("rpc_command_config=", rpc_command_config)
             try:
                 response = self.__function_to_device(rpc_command_config, rpc_command_config["unitId"])
+                print("response=", response)
             except Exception as e:
                 log.exception(e)
                 response = e
@@ -332,12 +346,34 @@ class ModbusConnector(Connector, threading.Thread):
                                                   response)
             log.debug("%r", response)
 
+    def put(self, event):
+        success = False
+        try:
+            self.__events_queue.put(event)
+            success = True
+        except Full:
+
+            log.error("Memory storage is full!")
+        return success
+
+    def get_event_pack(self):
+        try:
+            if not self.__event_pack:
+                self.__event_pack = [self.__events_queue.get(False)]
+        except Empty:
+            pass
+        return self.__event_pack
+
+    def event_pack_processing_done(self):
+        self.__event_pack = []
 if __name__ == '__main__':
     from pymodbus.constants import Endian
     from pymodbus.payload import BinaryPayloadDecoder
+    import ctypes
+    ctypes.pythonapi
     # master = ModbusTcpClient("192.168.1.113", 502, ModbusSocketFramer, timeout=5)
     master = ModbusSerialClient(method="rtu",
-                                port="COM1",
+                                port="/dev/ttyTHS2",
                                 timeout=1,
                                 baudrate=9600,
                                 stopbits=1,
@@ -345,7 +381,7 @@ if __name__ == '__main__':
                                 parity='N',
                                 strict=True)
     # result = master.read_input_registers(0, 2, unit=0x01)
-    result = master.read_holding_registers(0, 2, unit=0x01)
+    result = master.read_holding_registers(16, 1, unit=0x01)
     if "Exception" not in str(result):
         registers = result.registers
         print("registers=", registers)
