@@ -5,3 +5,5 @@
 /wthings_gateway/data/
 /wthings_gateway/logs/
 /wthings_gateway/config/wt_gateway.yaml
+wthings_gateway/config/AlarmLed.json
+wthings_gateway/connectors/can/__pycache__/

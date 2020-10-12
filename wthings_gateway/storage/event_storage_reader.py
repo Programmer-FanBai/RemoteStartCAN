@@ -35,6 +35,7 @@ class EventStorageReader:
         self.new_pos = self.current_pos
 
     def read(self):
+        is_debug = False
         if self.current_batch is not None and self.current_batch:
             log.debug("The previous batch was not discarded!")
             return self.current_batch
@@ -53,6 +54,8 @@ class EventStorageReader:
                         except IOError as e:
                             log.warning("Could not parse line [%s] to uplink message! %s", line, e)
                         except Exception as e:
+                            print("line=", line, "current_line_in_file", current_line_in_file, self.new_pos.get_file())
+                            is_debug = True
                             log.exception(e)
                             current_line_in_file += 1
                             self.new_pos.set_line(current_line_in_file)
@@ -87,6 +90,8 @@ class EventStorageReader:
                 break
             except Exception as e:
                 log.exception(e)
+        if is_debug:
+            print("self.current_batch=", self.current_batch)
         return self.current_batch
 
     def discard_batch(self):

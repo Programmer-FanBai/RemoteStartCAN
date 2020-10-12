@@ -68,7 +68,7 @@ class ModbusExpand(Expand):
                 "type": "modbus",
                 "configuration": name+".json"
             }
-        print("self.modbus=", self.modbus)
+        #print("self.modbus=", self.modbus)
 
     def get_expand(self):
         return self.modbus
@@ -103,7 +103,7 @@ class OpcDAExpand(Expand):
                 "type": "opcda",
                 "configuration": "%s.json" % (name, )
             }
-        print("self.opcda=", self.opcda)
+        # print("self.opcda=", self.opcda)
 
     def get_expand(self):
         return self.opcda
@@ -137,7 +137,7 @@ class PLCSiemensS7Expand(Expand):
                 "type": "plc",
                 "configuration": "%s.json" % (name, )
             }
-        print("self.plc_s7=", self.plc_s7)
+        #print("self.plc_s7=", self.plc_s7)
 
     def get_expand(self):
         return self.plc_s7
@@ -170,7 +170,7 @@ class PLCOmronExpand(Expand):
                 "type": "plc",
                 "configuration": "%s.json" % (name, )
             }
-        print("self.omron=", self.omron)
+        #print("self.omron=", self.omron)
 
     def get_expand(self):
         return self.omron
@@ -203,7 +203,7 @@ class PLCAllenBradleyExpand(Expand):
                 "type": "plc",
                 "configuration": "%s.json" % (name, )
             }
-        print("self.omron=", self.omron)
+        #print("self.omron=", self.omron)
 
     def get_expand(self):
         return self.omron
@@ -235,7 +235,7 @@ class PLCMelsecExpand(Expand):
                 "type": "plc",
                 "configuration": "%s.json" % (name, )
             }
-        print("self.melsec=", self.melsec)
+        #print("self.melsec=", self.melsec)
 
     def get_expand(self):
         return self.melsec
@@ -268,7 +268,7 @@ class PLCAllenBradleyExpand(Expand):
                 "type": "plc",
                 "configuration": "%s.json" % (name, )
             }
-        print("self.allenbradley=", self.allenbradley)
+        #print("self.allenbradley=", self.allenbradley)
 
     def get_expand(self):
         return self.allenbradley
@@ -362,7 +362,6 @@ def process_extend(configuration, old_general_configuration_file, old_logs_confi
     plcs = []
     sockets = []
     connectors = []
-    print("configuration=", configuration)
     for i, v in enumerate(configuration):
         if v["type"] == "OPC UA":
             for n, m in enumerate(v["configuration"]["servers"]):
@@ -434,13 +433,19 @@ def process_extend(configuration, old_general_configuration_file, old_logs_confi
                     "configuration": "%s.json" % (applicationName, )
                 })
     # conf[type] 是相当于解析json文件到字典里
-    conf["opcua"] = opcuas
-    conf["modbus"] = modbus
-    conf["opcda"] = opcdas
-    conf["plc"] = plcs
-    conf["socket"] = sockets
+    if opcuas:
+        conf["opcua"] = opcuas
+    if modbus:
+        conf["modbus"] = modbus
+    if opcdas:
+        conf["opcda"] = opcdas
+    if plcs:
+        conf["plc"] = plcs
+    if sockets:
+        conf["socket"] = sockets
     # conf["wthings"]["connectors"] 是配置文件
-    conf["wthings"]["connectors"] = connectors
+    if connectors:
+       conf["wthings"]["connectors"] = connectors
     return conf
 
 

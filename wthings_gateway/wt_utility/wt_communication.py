@@ -1455,7 +1455,7 @@ class ReverseWordTransform(ByteTransform):
 class ByteTransformHelper:
     '''所有数据转换类的静态辅助方法'''
     @staticmethod
-    def GetResultFromBytes( result, translator ):
+    def GetResultFromBytes(result,translator):
         '''结果转换操作的基础方法，需要支持类型，及转换的委托
 
 		Parameter
@@ -1466,7 +1466,8 @@ class ByteTransformHelper:
 		'''
         try:
             if result.IsSuccess:
-                return OperateResult.CreateSuccessResult(translator( result.Content ))
+                result = translator(result.Content)
+                return OperateResult.CreateSuccessResult(result)
             else:
                 return result
         except Exception as ex:
@@ -1929,8 +1930,13 @@ class NetworkBase:
         data = bytearray()
         try:
             while totle < length:
-                data.extend( socket.recv( length-totle ))
+                data.extend(socket.recv(length-totle))
                 totle = len(data)
+                if totle == 0:
+                    result = OperateResult()
+                    result.Message = str("recv = " + totle)
+                    return result
+            #print("socket=",socket,"data=",data)
             return OperateResult.CreateSuccessResult(data)
         except Exception as e:
             result = OperateResult()
@@ -1955,7 +1961,7 @@ class NetworkBase:
     def ReceiveMessage( self, socket, timeOut, netMsg ):
         '''接收一条完整的数据，使用异步接收完成，包含了指令头信息'''
         result = OperateResult()
-        headResult = self.Receive( socket, netMsg.ProtocolHeadBytesLength() )
+        headResult = self.Receive(socket,netMsg.ProtocolHeadBytesLength())
         if headResult.IsSuccess == False:
             result.CopyErrorFromOther(headResult)
             return result
@@ -2132,16 +2138,15 @@ class NetworkDoubleBase(NetworkBase):
         return result
     def ConnectClose( self ):
         '''在长连接模式下，断开服务器的连接，并切换到短连接模式'''
-        result = OperateResult( )
+        result = OperateResult()
         self.isPersistentConn = False
-
         self.interactiveLock.acquire()
         # 额外操作
-        result = self.ExtraOnDisconnect( self.CoreSocket )
+        result = self.ExtraOnDisconnect(self.CoreSocket)
         # 关闭信息
         if self.CoreSocket != None : self.CoreSocket.close()
         self.CoreSocket = None
-        self.interactiveLock.release( )
+        self.interactiveLock.release()
         return result
 
 
@@ -2151,7 +2156,8 @@ class NetworkDoubleBase(NetworkBase):
         return OperateResult.CreateSuccessResult()
     def ExtraOnDisconnect( self, socket ):
         '''在将要和服务器进行断开的情况下额外的操作，需要根据对应协议进行重写'''
-        return OperateResult.CreateSuccessResult()
+        result = OperateResult.CreateSuccessResult()
+        return result
 
     def GetAvailableSocket( self ):
         '''获取本次操作的可用的网络套接字'''
@@ -2192,7 +2198,7 @@ class NetworkDoubleBase(NetworkBase):
 
     def ReadFromCoreSocketServer( self, socket, send ):
         '''在其他指定的套接字上，使用报文来通讯，传入需要发送的消息，返回一条完整的数据指令'''
-        read = self.ReadFromCoreServerBase( socket, send )
+        read = self.ReadFromCoreServerBase(socket, send)
         if read.IsSuccess == False: return OperateResult.CreateFailedResult( read )
 
         # 拼接结果数据
@@ -2201,21 +2207,21 @@ class NetworkDoubleBase(NetworkBase):
             Content[0:len(read.Content1)] = read.Content1
         if len(read.Content2) > 0 :
             Content[len(read.Content1):len(Content)] = read.Content2
-        return OperateResult.CreateSuccessResult( Content )
+        return OperateResult.CreateSuccessResult(Content)
 
     def ReadFromCoreServer( self, send ):
         '''使用底层的数据报文来通讯，传入需要发送的消息，返回一条完整的数据指令'''
         result = OperateResult( )
         self.interactiveLock.acquire()
         # 获取有用的网络通道，如果没有，就建立新的连接
-        resultSocket = self.GetAvailableSocket( )
+        resultSocket = self.GetAvailableSocket()
         if resultSocket.IsSuccess == False:
             self.isSocketError = True
             self.interactiveLock.release()
-            result.CopyErrorFromOther( resultSocket )
+            result.CopyErrorFromOther(resultSocket)
             return result
 
-        read = self.ReadFromCoreSocketServer( resultSocket.Content, send )
+        read = self.ReadFromCoreSocketServer(resultSocket.Content,send)
         if read.IsSuccess :
             self.isSocketError = False
             result.IsSuccess = read.IsSuccess
@@ -2224,7 +2230,7 @@ class NetworkDoubleBase(NetworkBase):
         # string tmp2 = BasicFramework.SoftBasic.ByteToHexString( result.Content, '-' )
         else:
             self.isSocketError = True
-            result.CopyErrorFromOther( read )
+            result.CopyErrorFromOther(read)
 
         self.interactiveLock.release()
         if self.isPersistentConn==False:
@@ -2237,17 +2243,17 @@ class NetworkDoubleBase(NetworkBase):
         self.iNetMessage.SendBytes = send
         sendResult = self.Send( socket, send )
         if sendResult.IsSuccess == False:
-            if socket!= None : socket.close( )
-            return OperateResult.CreateFailedResult( sendResult )
+            if socket!= None : socket.close()
+            return OperateResult.CreateFailedResult(sendResult)
 
         # 接收超时时间大于0时才允许接收远程的数据
         if (self.receiveTimeOut >= 0):
             # 接收数据信息
             resultReceive = self.ReceiveMessage(socket, 10000, self.iNetMessage)
             if resultReceive.IsSuccess == False:
-                socket.close( )
+                socket.close()
                 return OperateResult( msg = "Receive data timeout: " + str(self.receiveTimeOut ) + " Msg:"+ resultReceive.Message)
-            return OperateResult.CreateSuccessResult( resultReceive.Content.HeadBytes, resultReceive.Content.ContentBytes )
+            return OperateResult.CreateSuccessResult(resultReceive.Content.HeadBytes, resultReceive.Content.ContentBytes)
         else:
             return OperateResult.CreateSuccessResult( bytearray(0), bytearray(0) )
 
@@ -2279,7 +2285,7 @@ class NetworkDeviceBase(NetworkDoubleBase):
         # 单个数据字节的长度，西门子为2，三菱，欧姆龙，modbusTcp就为1
         self.WordLength = 1
 
-    def Read( self, address, length ):
+    def Read( self, address,length):
         '''从设备读取原始数据
 
 		Parameter
@@ -2353,12 +2359,13 @@ class NetworkDeviceBase(NetworkDoubleBase):
             return ByteTransformHelper.GetResultFromArray( self.ReadDouble(address, 1) )
         else:
             return ByteTransformHelper.GetResultFromBytes( self.Read( address, length * self.WordLength * 4 ), lambda m: self.byteTransform.TransDoubleArray( m, 0, length ) )
-    def ReadString( self, address, length, encoding = None ):
+    def ReadString(self, address, length=1, encoding = None ):
         '''读取设备的字符串数据，编码为指定的编码信息，如果不指定，那么就是ascii编码'''
         if encoding == None:
-            return self.ReadString( address, length, 'ascii' )
+            return self.ReadString(address,length,'ascii' )
         else:
-            return ByteTransformHelper.GetResultFromBytes( self.Read( address, length ), lambda m: self.byteTransform.TransString( m, 0, len(m), encoding ) )
+            result = ByteTransformHelper.GetResultFromBytes(self.Read(address,length), lambda m:self.byteTransform.TransString(m,0,len(m),encoding))
+            return result
 
     def WriteBool( self, address, value ):
         '''向设备中写入bool数据或是数组，返回是否写入成功'''
@@ -5148,17 +5155,16 @@ class AllenBradleyHelper:
             elif err == 0x26 : return OperateResult(err=err, msg=StringResources.Language.AllenBradley26)
             elif err == 0x00 : None
             else : return OperateResult(err= err, msg= StringResources.Language.UnknownError)
-
             if response[offset + 2] == 0xCD or response[offset + 2] == 0xD3 :
-                return OperateResult.CreateSuccessResult( data, dataType, hasMoreData )
+                return OperateResult.CreateSuccessResult(data, dataType, hasMoreData )
             if response[offset + 2] == 0xCC or response[offset + 2] == 0xD2 :
-                for i in range(offset + 8, offset + 2+ count, 1):
-                    data.append( response[i] )
+                for i in range(offset + 8, offset + 2 + count, 1):
+                    data.append(response[i])
                 dataType = struct.unpack( '<H', response[offset + 6:offset + 8] )[0]
             elif response[offset + 2] == 0xD5 :
                 for i in range(offset + 6, offset + 2+ count, 1):
-                    data.append( response[i] )
-        return OperateResult.CreateSuccessResult( data, dataType, hasMoreData )
+                    data.append(response[i])
+        return OperateResult.CreateSuccessResult(data,dataType, hasMoreData )
 class AllenBradleyNet(NetworkDeviceBase):
     def __init__(self, ipAddress, port):
         '''Instantiate a communication object for a Allenbradley PLC protocol
@@ -5192,9 +5198,9 @@ class AllenBradleyNet(NetworkDeviceBase):
     def ExtraOnDisconnect( self, socket):
         '''A next step handshake agreement is required before disconnecting the Allenbradley plc'''
         # Unregister session Information
-        read = self.ReadFromCoreServerBase( socket, self.UnRegisterSessionHandle( ) )
-        if read.IsSuccess == False : return read
-
+        read = self.ReadFromCoreServerBase(socket, self.UnRegisterSessionHandle())
+        if read.IsSuccess == False:
+            return read
         return OperateResult.CreateSuccessResult()
     def SetSlot(self, Slot):
         self.Slot = Slot
@@ -5239,7 +5245,7 @@ class AllenBradleyNet(NetworkDeviceBase):
             return OperateResult.CreateSuccessResult( AllenBradleyHelper.PackRequestHeader( self.CipCommand, self.SessionHandle, commandSpecificData ) )
         except Exception as e:
             return OperateResult(msg="Address Wrong:" + str(e))
-    def Read( self, address, length ):
+    def Read( self, address, length):
         '''Read data information, data length for read array length information
 
 		Prarameter
@@ -5250,27 +5256,25 @@ class AllenBradleyNet(NetworkDeviceBase):
 		'''
         if type(address) == list and type(length) == list:
             # 指令生成 -> Instruction Generation
-            command = self.BuildReadCommand( address, length )
+            command = self.BuildReadCommand(address,length)
             if command.IsSuccess == False: return command
 
             # 核心交互 -> Core Interactions
-            read = self.ReadFromCoreServer( command.Content )
+            read = self.ReadFromCoreServer(command.Content)
             if read.IsSuccess == False : return read
 
             # 检查反馈 -> Check Feedback
-            check = self.CheckResponse( read.Content )
+            check = self.CheckResponse(read.Content)
             if check.IsSuccess == False : return check
 
             # 提取数据 -> Extracting data
-            extract = AllenBradleyHelper.ExtractActualData( read.Content, True )
+            extract = AllenBradleyHelper.ExtractActualData(read.Content,True)
             if extract.IsSuccess == False : return extract
-
             return OperateResult.CreateSuccessResult(extract.Content1)
-
         if length > 1:
-            return self.ReadSegment( address, 0, length )
+            return self.ReadSegment(address, 0, length)
         else:
-            return self.Read( [address] , [length] )
+            return self.Read( [address], [length])
     def ReadSegment( self, address, startIndex, length ):
         '''Read Segment Data Array form plc, use address tag name
 
@@ -5284,7 +5288,7 @@ class AllenBradleyNet(NetworkDeviceBase):
         try:
             bytesContent = bytearray()
             while True:
-                read = self.ReadCipFromServer( AllenBradleyHelper.PackRequestReadSegment( address, startIndex, length ) )
+                read = self.ReadCipFromServer( AllenBradleyHelper.PackRequestReadSegment( address, startIndex, length))
                 if read.IsSuccess == False : return read
 
                 # 提取数据 -> Extracting data
@@ -5420,9 +5424,9 @@ class AllenBradleyNet(NetworkDeviceBase):
             return ByteTransformHelper.GetResultFromArray( self.ReadDouble(address, 1) )
         else:
             return ByteTransformHelper.GetResultFromBytes( self.Read( address, length ), lambda m : self.byteTransform.TransDoubleArray( m, 0, length ) )
-    def ReadString( self, address ):
+    def ReadString( self, address, length=1, encoding = None ):
         '''读取PLC的string类型的数据 -> read plc string type value'''
-        return super().ReadString( address, 1 )
+        return super().ReadString(address,length,encoding)
 
     def Write( self, address, value ):
         '''当前的PLC不支持该功能，需要调用WriteTag(string, ushort, byte[], int) 方法来实现。'''

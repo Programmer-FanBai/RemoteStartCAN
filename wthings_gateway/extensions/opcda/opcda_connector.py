@@ -141,6 +141,7 @@ class CustomOpcdaConnector(Thread, Connector):    # Define a connector class, it
             traceback.print_exc()
         finally:
             self.opc_servers = None
+        log.info('%s has been stopped.', self.get_name())
 
     def on_attributes_update(self, content):    # Function used for processing attribute update requests from WThings
         log.debug(content)

@@ -1,18 +1,4 @@
-# -*- coding: utf-8 -*-
 
-#     Copyright 2019. WaveletThings
-#
-#     Licensed under the Apache License, Version 2.0 (the "License");
-#     you may not use this file except in compliance with the License.
-#     You may obtain a copy of the License at
-#
-#         http://www.apache.org/licenses/LICENSE-2.0
-#
-#     Unless required by applicable law or agreed to in writing, software
-#     distributed under the License is distributed on an "AS IS" BASIS,
-#     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-#     See the License for the specific language governing permissions and
-#     limitations under the License.
 
 from setuptools import setup
 from os import path
@@ -45,18 +31,15 @@ setup(
               'wthings_gateway.extensions.mqtt', 'wthings_gateway.extensions.modbus', 'wthings_gateway.extensions.opcua',
               'wthings_gateway.extensions.ble', 'wthings_gateway.extensions.serial', 'wthings_gateway.extensions.request',
               'wthings_gateway.extensions.can', 'wthings_gateway.extensions.bacnet', 'wthings_gateway.extensions.odbc',
-              'wthings_gateway.extensions.rest',  'wthings_gateway.extensions.snmp'
+              'wthings_gateway.extensions.rest',  'wthings_gateway.extensions.snmp', 'wthings_gateway.extensions.opcda',
+              'wthings_gateway.extensions.plc'
               ],
     install_requires=[
-        'cffi',
         'jsonpath-rw',
         'regex',
         'pip',
-        'jsonschema==3.1.1',
-        'lxml',
         'paho-mqtt',
         'pyserial',
-        'pytz',
         'PyYAML',
         'simplejson',
         'requests'

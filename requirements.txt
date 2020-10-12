@@ -1,0 +1,7 @@
+regex
+pip
+paho-mqtt
+pyserial
+PyYAML
+simplejson
+requests

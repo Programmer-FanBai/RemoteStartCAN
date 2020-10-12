@@ -19,7 +19,7 @@ from time import time, sleep
 from logging import getLogger
 from logging.config import fileConfig
 from base64 import b64encode, b64decode
-from simplejson import dumps, loads, dump
+from simplejson import dumps, loads, dump,load
 from yaml import safe_dump
 from configparser import ConfigParser
 
@@ -89,7 +89,6 @@ class RemoteConfigurator:
                 LOG.info("process_configuration extend")
                 self.__new_configuration = conf
                 decoded_configuration = dumps(conf)
-
                 self.__old_connectors_configs = self.__gateway.connectors_configs
                 self.__new_general_configuration_file = self.__new_configuration.get("wthings")
                 self.__new_logs_configuration = b64decode(self.__new_general_configuration_file.pop("logs")).decode('UTF-8').replace('}}', '\n')
