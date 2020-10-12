@@ -310,34 +310,34 @@ class CanConnector(Connector, Thread):
                     print(r)
         except:
             pass
-        if message.arbitration_id not in self.__nodes:
-            # Too lot log messages in case of high message generation frequency
-            log.debug("[%s] Ignoring CAN message. Unknown arbitration_id %d", self.get_name(), message.arbitration_id)
-            return
-
-        cmd_conf = self.__commands[message.arbitration_id]
-        if cmd_conf is not None:
-            cmd_id = cmd_conf["value"]
-            # cmd_id = int.from_bytes(message.data[cmd_conf["start"]:cmd_conf["start"] + cmd_conf["length"]],
-            #                         cmd_conf["byteorder"])
-        else:
-            cmd_id = self.NO_CMD_ID
-
-        if cmd_id not in self.__nodes[message.arbitration_id]:
-            log.debug("[%s] Ignoring CAN message. Unknown cmd_id %d", self.get_name(), cmd_id)
-            return
-
-        log.debug("[%s] Processing CAN message (id=%d,cmd_id=%s): %s",
-                  self.get_name(), message.arbitration_id, cmd_id, message)
-
-        parsing_conf = self.__nodes[message.arbitration_id][cmd_id]
-        data = self.__converters[parsing_conf["deviceName"]]["uplink"].convert(parsing_conf["configs"], message.data)
-
-        if data is None or not data.get("attributes", []) and not data.get("telemetry", []):
-            log.warning("[%s] Failed to process CAN message (id=%d,cmd_id=%s): data conversion failure",
-                     self.get_name(), message.arbitration_id, cmd_id)
-            return
-        self.__check_and_send(parsing_conf, data)
+        # if message.arbitration_id not in self.__nodes:
+        #     # Too lot log messages in case of high message generation frequency
+        #     log.debug("[%s] Ignoring CAN message. Unknown arbitration_id %d", self.get_name(), message.arbitration_id)
+        #     return
+        #
+        # cmd_conf = self.__commands[message.arbitration_id]
+        # if cmd_conf is not None:
+        #     cmd_id = cmd_conf["value"]
+        #     # cmd_id = int.from_bytes(message.data[cmd_conf["start"]:cmd_conf["start"] + cmd_conf["length"]],
+        #     #                         cmd_conf["byteorder"])
+        # else:
+        #     cmd_id = self.NO_CMD_ID
+        #
+        # if cmd_id not in self.__nodes[message.arbitration_id]:
+        #     log.debug("[%s] Ignoring CAN message. Unknown cmd_id %d", self.get_name(), cmd_id)
+        #     return
+        #
+        # log.debug("[%s] Processing CAN message (id=%d,cmd_id=%s): %s",
+        #           self.get_name(), message.arbitration_id, cmd_id, message)
+        #
+        # parsing_conf = self.__nodes[message.arbitration_id][cmd_id]
+        # data = self.__converters[parsing_conf["deviceName"]]["uplink"].convert(parsing_conf["configs"], message.data)
+        #
+        # if data is None or not data.get("attributes", []) and not data.get("telemetry", []):
+        #     log.warning("[%s] Failed to process CAN message (id=%d,cmd_id=%s): data conversion failure",
+        #              self.get_name(), message.arbitration_id, cmd_id)
+        #     return
+        # self.__check_and_send(parsing_conf, data)
 
     def __check_and_send(self, conf, new_data):
         self.statistics['MessagesReceived'] += 1
