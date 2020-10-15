@@ -38,7 +38,7 @@ from wthings_gateway.connectors.connector import Connector, log
 class CanConnector(Connector, Thread):
     CMD_REGEX = r"^(\d{1,2}):(\d{1,2}):?(big|little)?:(\d+)$"
     VALUE_REGEX = r"^(\d{1,2}):(\d{1,2}):?(big|little)?:(bool|boolean|int|long|float|double|string):?([0-9A-Za-z-_]+)?$"
-    DBC_FILE= cantools.database.load_file('./Boltpowertrain.dbc')
+
     NO_CMD_ID = "no_cmd"
     UNKNOWN_ARBITRATION_ID = -1
 
@@ -68,6 +68,7 @@ class CanConnector(Connector, Thread):
                            'MessagesSent': 0}
         super().__init__()
         self.setName(config.get("name", 'CAN Connector ' + ''.join(choice(ascii_lowercase) for _ in range(5))))
+        self.__dbc_file = ''
         self.__gateway = gateway
         self.__connector_type = connector_type
         self.__bus_conf = {}
@@ -297,69 +298,75 @@ class CanConnector(Connector, Thread):
         return config
 
     def __process_message(self, message):
+        '''
+        解析can总线数据，获取数据后从can.json文件中提取配置
+        比对dbc名称是否正确；查看数据传输类型；
+        :param message:can总线数据
+        :return:
+        '''
+        device_conf = {}
+        is_send = True
         try:
-            dbc_data = self.DBC_FILE.decode_message(message.arbitration_id, message.data)
-            if dbc_data:
+            #dbc_data为解析can总线的数据
+            dbc_data = self.__dbc_file.decode_message(message.arbitration_id, message.data)
+            try:
+                #device_conf为提取json文件的配置信息
+                device_conf = self.__nodes[message.arbitration_id][message.arbitration_id]
+                #json文件中的名称
+                message_name = device_conf["configs"][0]["name"]
+                #dbc文件中的名称
+                dbc_message_name = self.__dbc_file.get_message_by_frame_id(message.arbitration_id).name
+
+                #名称不符禁止发送数据
+                if message_name != dbc_message_name :
+
+                    log.info("[%s] The data name does not match, it should be '%s'",
+                             self.get_name(), dbc_message_name)
+
+                    is_send = False
+                #简写名称
+                sim_name = device_conf["configs"][0]["key"]
+
+                if sim_name is not "":
+                    sim_name += '_'
+                else:
+                    message_name = self.__dbc_file.get_message_by_frame_id(message.arbitration_id).name + '_'
+
+            except:
+                message_name = self.__dbc_file.get_message_by_frame_id(message.arbitration_id).name + '_'
+
+            dbc_data['id'] = hex(message.arbitration_id)
+
+            if dbc_data and device_conf and is_send:
                 try:
-                    data ={'attributes': [], 'telemetry': [], 'deviceName': 'Car', 'deviceType': 'can'}
-                    for k, v  in dbc_data.items():
-                        item = { k : v}
-                        data["telemetry"] = [{ "ts": int(time.time() * 1000),"values": item}]
-                        self.__gateway.send_to_storage(self.get_name(), data)
-                except  Exception as r:
-                    print(r)
+                    #是否属于timeseries
+                    is_ts = device_conf["configs"][0]["is_ts"]
+                    #是否属于attributes
+                    is_at = device_conf["configs"][0]["is_at"]
+
+                    data = {'attributes': [],
+                            'telemetry': {},
+                            'deviceName': device_conf["deviceName"],
+                            'deviceType': device_conf["deviceType"]}
+
+                    #数据拼接
+                    for k, v in dbc_data.items():
+                        item = {message_name + k: v}
+                        if is_ts:
+                            data["telemetry"] = [{"ts": int(time.time() * 1000),
+                                                  "values": item}]
+                            self.__gateway.send_to_storage(self.get_name(), data)
+                        if is_at:
+                            data["telemetry"] = {}
+                            data["attributes"] = [ item ]
+                            self.__gateway.send_to_storage(self.get_name(), data)
+
+                except  Exception as er:
+                    log.error("[%s] error: %s",
+                              self.get_name(), er)
         except:
-            pass
-        # if message.arbitration_id not in self.__nodes:
-        #     # Too lot log messages in case of high message generation frequency
-        #     log.debug("[%s] Ignoring CAN message. Unknown arbitration_id %d", self.get_name(), message.arbitration_id)
-        #     return
-        #
-        # cmd_conf = self.__commands[message.arbitration_id]
-        # if cmd_conf is not None:
-        #     cmd_id = cmd_conf["value"]
-        #     # cmd_id = int.from_bytes(message.data[cmd_conf["start"]:cmd_conf["start"] + cmd_conf["length"]],
-        #     #                         cmd_conf["byteorder"])
-        # else:
-        #     cmd_id = self.NO_CMD_ID
-        #
-        # if cmd_id not in self.__nodes[message.arbitration_id]:
-        #     log.debug("[%s] Ignoring CAN message. Unknown cmd_id %d", self.get_name(), cmd_id)
-        #     return
-        #
-        # log.debug("[%s] Processing CAN message (id=%d,cmd_id=%s): %s",
-        #           self.get_name(), message.arbitration_id, cmd_id, message)
-        #
-        # parsing_conf = self.__nodes[message.arbitration_id][cmd_id]
-        # data = self.__converters[parsing_conf["deviceName"]]["uplink"].convert(parsing_conf["configs"], message.data)
-        #
-        # if data is None or not data.get("attributes", []) and not data.get("telemetry", []):
-        #     log.warning("[%s] Failed to process CAN message (id=%d,cmd_id=%s): data conversion failure",
-        #              self.get_name(), message.arbitration_id, cmd_id)
-        #     return
-        # self.__check_and_send(parsing_conf, data)
-
-    def __check_and_send(self, conf, new_data):
-        self.statistics['MessagesReceived'] += 1
-        to_send = {"attributes": [], "telemetry": []}
-        send_on_change = conf["sendOnChange"]
-
-        for wt_key in to_send.keys():
-            for key, new_value in new_data[wt_key].items():
-                if not send_on_change or self.__devices[conf["deviceName"]][wt_key][key] != new_value:
-                    self.__devices[conf["deviceName"]][wt_key][key] = new_value
-                    to_send[wt_key].append({key: new_value})
-
-        if to_send["attributes"] or to_send["telemetry"]:
-            to_send["deviceName"] = conf["deviceName"]
-            to_send["deviceType"] = conf["deviceType"]
-
-            log.debug("[%s] Pushing to WT server '%s' device data: %s", self.get_name(), conf["deviceName"], to_send)
-            self.__gateway.send_to_storage(self.get_name(), to_send)
-
-            self.statistics['MessagesSent'] += 1
-        else:
-            log.debug("[%s] '%s' device data has not been changed", self.get_name(), conf["deviceName"])
+            log.debug("[%s] There is no such data in the database",
+                     self.get_name())
 
     def __is_reconnect_enabled(self):
         if self.__reconnect_conf["enabled"]:
@@ -383,6 +390,7 @@ class CanConnector(Connector, Thread):
             "channel": config.get("channel", "vcan0"),
             "backend": config.get("backend", {})
         }
+        self.__dbc_file = cantools.database.load_file(config.get("dbc_Path"))
 
         for device_config in config.get("devices"):
             is_device_config_valid = False
@@ -409,8 +417,8 @@ class CanConnector(Connector, Thread):
                 for rpc_config in device_config["serverSideRpc"]:
                     rpc_config["strictEval"] = strict_eval
                     self.__rpc_calls[device_name][rpc_config["method"]] = rpc_config
-
             if "attributeUpdates" in device_config and device_config["attributeUpdates"]:
+
                 is_device_config_valid = True
                 self.__shared_attributes[device_name] = {}
 
@@ -425,41 +433,32 @@ class CanConnector(Connector, Thread):
             for config_key in ["timeseries", "attributes"]:
                 if config_key not in device_config or not device_config[config_key]:
                     continue
-
                 is_device_config_valid = True
-                is_ts = (config_key[0] == "t")
+                is_ts = (config_key[0] == 't')
                 wt_item = "telemetry" if is_ts else "attributes"
-
                 self.__devices[device_name][wt_item] = {}
-
                 if "uplink" not in self.__converters[device_name]:
                     self.__converters[device_name]["uplink"] = self.__get_converter(device_config.get("converters"),
                                                                                     True)
                 for msg_config in device_config[config_key]:
                     wt_key = msg_config["key"]
                     msg_config["strictEval"] = strict_eval
-                    msg_config["is_ts"] = is_ts
 
-                    node_id = msg_config.get("nodeId", self.UNKNOWN_ARBITRATION_ID)
+                    #判断是attributes还是timeseries
+                    if config_key[0] == 't':
+                        msg_config["is_ts"] = True
+                    if config_key[0] == 'a':
+                        msg_config["is_at"] = True
+                    #将json文件的nodeid字符串转换为int
+                    node_id = int(msg_config.get("nodeId"),16)
                     if node_id == self.UNKNOWN_ARBITRATION_ID:
                         log.warning("[%s] Ignore '%s' %s configuration: no arbitration id",
                                     self.get_name(), wt_key, config_key)
                         continue
 
-                    value_config = self.__parse_value_config(msg_config.get("value"))
-                    if value_config is not None:
-                        msg_config.update(value_config)
-                    else:
-                        log.warning("[%s] Ignore '%s' %s configuration: no value configuration",
-                                    self.get_name(), wt_key, config_key, )
-                        continue
-
                     if msg_config.get("command", "") and node_id not in self.__commands:
                         cmd_config = self.__parse_command_config(msg_config["command"])
-                        if cmd_config is None:
-                            log.warning("[%s] Ignore '%s' %s configuration: wrong command configuration",
-                                        self.get_name(), wt_key, config_key, )
-                            continue
+
 
                         cmd_id = cmd_config["value"]
                         self.__commands[node_id] = cmd_config
@@ -469,6 +468,10 @@ class CanConnector(Connector, Thread):
 
                     if node_id not in self.__nodes:
                         self.__nodes[node_id] = {}
+                        self.__nodes[node_id][node_id] ={
+                            "deviceName": device_name,
+                            "deviceType": device_type,
+                            "configs": []}
 
                     if cmd_id not in self.__nodes[node_id]:
                         self.__nodes[node_id][cmd_id] = {
@@ -477,6 +480,22 @@ class CanConnector(Connector, Thread):
                             "sendOnChange": device_config.get("sendDataOnlyOnChange", self.DEFAULT_SEND_IF_CHANGED),
                             "configs": []}
                     self.__nodes[node_id][cmd_id]["configs"].append(msg_config)
+
+                    #添加以nodeid为key的配置
+                    self.__nodes[node_id][node_id]["configs"].append(msg_config)
+
+                    #添加传输数据所属类型
+                    if len(self.__nodes[node_id][node_id]["configs"] ) == 1:
+                        con = self.__nodes[node_id][node_id]["configs"]
+                        if "is_ts" in con[0].keys():
+                            con[0]["is_at"] = False
+                        else:
+                            con[0]["is_ts"] = False
+                    if len(self.__nodes[node_id][node_id]["configs"]) == 2:
+                        con = self.__nodes[node_id][node_id]["configs"]
+                        con[0]["is_at"] = True
+                        con.pop(1)
+
                     self.__devices[device_name][wt_item][wt_key] = None
 
                     if "polling" in msg_config:
